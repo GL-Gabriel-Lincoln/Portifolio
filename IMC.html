@@ -14,6 +14,15 @@
             background-size: cover;
         }
 
+        body {
+            caret-color: transparent;
+        }
+        
+        #weight, #height {
+            caret-color: auto;
+        }
+        
+
         h1 {
             text-align: center;
         }
@@ -59,7 +68,7 @@
             border: 2px solid black; /* Adiciona uma borda preta de 2px */
             background-color: #0000007c; /* Define a cor de fundo para cinza claro */
             padding: 10px; /* Adiciona um pouco de espaço ao redor do texto */
-            font-size: 26px; /* Aumenta o tamanho da fonte */
+            font-size: 20px; /* Aumenta o tamanho da fonte */
             font-family: Arial, sans-serif; /* Muda a fonte para Arial */
 
             text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
@@ -79,6 +88,7 @@
          
             color: #ffffff ;
             display: none;
+            width: 17%;
         }
 
         * {
@@ -121,9 +131,9 @@
     <!-- Em HTML, usamos tags de entrada para receber a entrada do usuário (linhas "printf("Digite seu peso: ");", "scanf("%f", &weight);") -->
     <!-- Em HTML, usamos tags de entrada para receber a entrada do usuário (linhas "printf("Digite sua altura: ");", "scanf("%f", &height);") -->
     <br>
-    <a> Peso: <input type="text" id="weight" name="weight" oninput="clearResult()"></a>
+    <a> Peso(kg): <input type="text" id="weight" name="weight" oninput="clearResult()"></a>
     <br><br><br>
-    <a> Altura: <input type="text" id="height" name="height" oninput="clearResult()"></a>
+    <a> Altura(m): <input type="text" id="height" name="height" oninput="clearResult()"></a>
     <br><br>
     <button id="calculateButton" onclick="calculateBMI()">Calcular IMC</button>
     <br><br>
