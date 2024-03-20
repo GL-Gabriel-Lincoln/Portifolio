@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>IMC</title>
+    <title>Média Aritmética</title>
 
     <link rel="icon" href="./GL.ico" type="image/x-icon">
 
@@ -18,7 +18,7 @@
             caret-color: transparent;
         }
         
-        #weight, #height {
+        #a, #b, #c {
             caret-color: auto;
         }
         
@@ -88,7 +88,7 @@
          
             color: #ffffff ;
             display: none;
-            width: 17%;
+            width: 29%;
         }
 
         * {
@@ -119,20 +119,22 @@
         <a href="./historico_202200145.pdf">Historico</a>
         <!-- Adicione mais links conforme necessário -->
     </div>
-    <h2><a>IMC</a></h2>
+    <h2><a>Média Aritmética</a></h2>
     
 
-    <h1> O IMC, ou Índice de Massa Corporal, é um cálculo que permite avaliar se a pessoa está dentro do peso que é considerado ideal para a sua altura. <br><br>Digite o seu peso e a sua altura para saber o seu IMC:
+    <h1> A média aritmética é um conceito fundamental em estatística e matemática. É uma medida de tendência central que indica o valor médio de um conjunto de números.
+         Para calcular a média aritmética, você soma todos os números em um conjunto e depois divide pelo número total de números.. 
+         <br><br>Digite o valor de a, b e c para saber a Média Aritmética dos valores:
     </h1>
 
-    <!-- Em HTML, usamos tags de entrada para receber a entrada do usuário (linhas "printf("Digite seu peso: ");", "scanf("%f", &weight);") -->
-    <!-- Em HTML, usamos tags de entrada para receber a entrada do usuário (linhas "printf("Digite sua altura: ");", "scanf("%f", &height);") -->
     <br>
-    <a> Peso(kg): <input type="text" id="weight" name="weight" oninput="clearResult()"></a>
+    <a> Valor de a: <input type="text" id="a" name="a" oninput="clearResult()"></a>
     <br><br><br>
-    <a> Altura(m): <input type="text" id="height" name="height" oninput="clearResult()"></a>
+    <a> Valor de b: <input type="text" id="b" name="b" oninput="clearResult()"></a>
+    <br><br><br>
+    <a> Valor de c: <input type="text" id="c" name="c" oninput="clearResult()"></a>
     <br><br>
-    <button id="calculateButton" onclick="calculateBMI()">Calcular IMC</button>
+    <button id="calculateButton" onclick="calculateBMI()">Calcular Média</button>
     <br><br>
     <div class="aa" id="result"></div>
 
@@ -145,24 +147,26 @@ function clearResult() {
 }
 
 function calculateBMI() {
-    // Em JavaScript, usamos "let" para declarar variáveis (linhas "float BMI;", "float weight;", "float height;")
-    let BMI;
-    let weight = document.getElementById('weight').value;
-    let height = document.getElementById('height').value;
+    
+    let average_arithmetic;
+    let a = document.getElementById('a').value;
+    let b = document.getElementById('b').value;
+    let c = document.getElementById('c').value;
     
     // Substitui todas as vírgulas por pontos
-    height = height.replace(',', '.');
+    a = a.replace(',', '.');
+    b = b.replace(',', '.');
+    c = c.replace(',', '.');
+    
+    average_arithmetic = (parseFloat(a) + parseFloat(b) + parseFloat(c)) / 3;
+    average_arithmetic = average_arithmetic.toFixed(2);
 
-    // A operação matemática é a mesma em C e JavaScript (linha "BMI = (weight/(height * height));")
-    BMI = (weight/(height * height));
-    BMI = BMI.toFixed(2);
-
-    // Em JavaScript, usamos "alert" ou "console.log" para exibir a saída (linha 'printf("BMI: %f\n", BMI);')
     // Em HTML, usamos o método innerHTML para exibir a saída
-    document.getElementById('result').innerHTML = "IMC: " + BMI;
+    document.getElementById('result').innerHTML = "Média aritmética: " + average_arithmetic;
     document.getElementById('result').style.display = 'block';
-    document.getElementById('weight').value = '';
-    document.getElementById('height').value = '';
+    document.getElementById('a').value = '';
+    document.getElementById('b').value = '';
+    document.getElementById('c').value = '';
 }
 </script>
 
