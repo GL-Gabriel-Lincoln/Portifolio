@@ -80,7 +80,21 @@
 
         * {
             caret-color: transparent;
-          }
+        }
+
+        #calculateButton {
+            font-size: 20px; /* Aumenta o tamanho da fonte */
+            padding: 10px 20px; /* Adiciona espaço ao redor do texto */
+            background-color: #4CAF50; /* Muda a cor de fundo para verde */
+            color: white; /* Muda a cor do texto para branco */
+            border: none; /* Remove a borda */
+            cursor: pointer; /* Muda o cursor para um ponteiro quando você passa o mouse sobre o botão */
+            border-radius: 5px; /* Adiciona bordas arredondadas */
+        }
+        
+        #calculateButton:hover {
+            background-color: #45a049; /* Muda a cor de fundo para um verde mais escuro quando você passa o mouse sobre o botão */
+        }
     </style>
 
     
@@ -109,7 +123,7 @@
     <br><br><br>
     <a> Altura: <input type="text" id="height" name="height" oninput="clearResult()"></a>
     <br><br>
-    <button onclick="calculateBMI()">Calcular IMC</button>
+    <button id="calculateButton" onclick="calculateBMI()">Calcular IMC</button>
     <br><br>
     <div class="aa" id="result"></div>
 
