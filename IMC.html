@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IMC</title>
+
+    <link rel="icon" href="./GL.ico" type="image/x-icon">
+
+    <style>
+        body {
+            background-image: url('./fundo_site.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+          }
+      
+        .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+    
+        .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+
+        a {
+            border: 2px solid black; /* Adiciona uma borda preta de 2px */
+            background-color: #5599ff; /* Define a cor de fundo para cinza claro */
+            padding: 10px; /* Adiciona um pouco de espaço ao redor do texto */
+
+            font-size: 30px; /* Aumenta o tamanho da fonte */
+            font-family: Arial, sans-serif; /* Muda a fonte para Arial */
+
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+         
+            color: #ffffff ;
+            
+        }
+
+    </style>
+
+    
+
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="./index.html">Principal</a>
+        <a href="./Projetos.html">Projetos</a>
+        <a href="./historico_202200145.pdf">Historico</a>
+        <a href="Sobre_mim.html"> Sobre </a>
+        <!-- Adicione mais links conforme necessário -->
+    </div>
+    <br><br>
+    <a>IMC</a>
+    <br><br>
+    
+    <!-- Em HTML, usamos tags de entrada para receber a entrada do usuário (linhas "printf("Digite seu peso: ");", "scanf("%f", &weight);") -->
+    <!-- Em HTML, usamos tags de entrada para receber a entrada do usuário (linhas "printf("Digite sua altura: ");", "scanf("%f", &height);") -->
+    <br>
+    <a> Peso: <input type="text" id="weight" name="weight" oninput="clearResult()"></a>
+    <br><br><br>
+    <a> Altura: <input type="text" id="height" name="height" oninput="clearResult()"></a>
+    <br><br>
+    <button onclick="calculateBMI()">Calcular IMC</button>
+    <br><br>
+    <a id="result"></a>
+
+<script>
+// A função principal em JavaScript é geralmente uma função anônima ou uma função nomeada. 
+// Não precisamos declarar o tipo de retorno como em C (linha "int main() {")
+function calculateBMI() {
+    // Em JavaScript, usamos "let" para declarar variáveis (linhas "float BMI;", "float weight;", "float height;")
+    let BMI;
+    let weight = document.getElementById('weight').value;
+    let height = document.getElementById('height').value;
+
+    // A operação matemática é a mesma em C e JavaScript (linha "BMI = (weight/(height * height));")
+    BMI = (weight/(height * height));
+
+    // Em JavaScript, usamos "alert" ou "console.log" para exibir a saída (linha 'printf("BMI: %f\n", BMI);')
+    // Em HTML, usamos o método innerHTML para exibir a saída
+    document.getElementById('result').innerHTML = "IMC: " + BMI;
+    document.getElementById('weight').value = '';
+    document.getElementById('right').value = '';
+    function clearResult() {
+        document.getElementById('result').innerHTML = '';
+      }
+}
+</script>
+
+</body>
+</html>
