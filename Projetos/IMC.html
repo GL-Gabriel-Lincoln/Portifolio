@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Média Aritmética</title>
+    <title>IMC</title>
 
-    <link rel="icon" href="./GL.ico" type="image/x-icon">
+    <link rel="icon" href="../GL.ico" type="image/x-icon">
 
     <style>
         body {
-            background-image: url('./fundo_site.png');
+            background-image: url('../fundo_site.png');
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -18,7 +18,7 @@
             caret-color: transparent;
         }
         
-        #a, #b, #c {
+        #weight, #height {
             caret-color: auto;
         }
         
@@ -88,7 +88,7 @@
          
             color: #ffffff ;
             display: none;
-            width: 29%;
+            width: 17%;
         }
 
         * {
@@ -96,45 +96,46 @@
         }
 
         #calculateButton {
-            font-size: 20px; /* Aumenta o tamanho da fonte */
-            padding: 10px 20px; /* Adiciona espaço ao redor do texto */
-            background-color: #4CAF50; /* Muda a cor de fundo para verde */
+            font-size: 40px; /* Aumenta o tamanho da fonte */
+            padding: 20px 40px; /* Adiciona espaço ao redor do texto */
+            background-color: #5599ff; /* Muda a cor de fundo para verde */
             color: white; /* Muda a cor do texto para branco */
-            border: none; /* Remove a borda */
+            border: 2px solid black;
             cursor: pointer; /* Muda o cursor para um ponteiro quando você passa o mouse sobre o botão */
             border-radius: 5px; /* Adiciona bordas arredondadas */
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         }
         
         #calculateButton:hover {
-            background-color: #45a049; /* Muda a cor de fundo para um verde mais escuro quando você passa o mouse sobre o botão */
+            background-color: #1a72f5; /* Muda a cor de fundo para um verde mais escuro quando você passa o mouse sobre o botão */
         }
     </style>
 </head>
 <body>
 
     <div class="navbar">
-        <a href="./index.html">Redes Sociais</a>
-        <a href="./Projetos.html">Projetos</a>
-        <a href="Sobre_mim.html"> Sobre </a>
-        <a href="./historico_202200145.pdf">Historico Academico</a>
+        <a href="../index.html">Redes Sociais</a>
+        <a href="../Principais_Projetos.html">Principais Projetos</a>
+        <a href="../Todos_Projetos.html">Todos Projetos</a>
+        <a href="../Sobre_mim.html">Sobre</a>
+        <a href="../Disciplinas_UFJ.html">Disciplinas UFJ</a>
+        <a href="../historico_202200145.pdf">Historico Academico</a>
         <!-- Adicione mais links conforme necessário -->
     </div>
-    <h2><a>Média Aritmética</a></h2>
+    <h2><a>IMC</a></h2>
     
 
-    <h1> A média aritmética é um conceito fundamental em estatística e matemática. É uma medida de tendência central que indica o valor médio de um conjunto de números.
-         Para calcular a média aritmética, você soma todos os números em um conjunto e depois divide pelo número total de números.. 
-         <br><br>Digite o valor de a, b e c para saber a Média Aritmética dos valores:
+    <h1> O IMC, ou Índice de Massa Corporal, é um cálculo que permite avaliar se a pessoa está dentro do peso que é considerado ideal para a sua altura. <br><br>Digite o seu peso e a sua altura para saber o seu IMC:
     </h1>
 
+    <!-- Em HTML, usamos tags de entrada para receber a entrada do usuário (linhas "printf("Digite seu peso: ");", "scanf("%f", &weight);") -->
+    <!-- Em HTML, usamos tags de entrada para receber a entrada do usuário (linhas "printf("Digite sua altura: ");", "scanf("%f", &height);") -->
     <br>
-    <a> Valor de a: <input type="text" id="a" name="a" oninput="clearResult()"></a>
+    <a> Peso(kg): <input type="text" id="weight" name="weight" oninput="clearResult()"></a>
     <br><br><br>
-    <a> Valor de b: <input type="text" id="b" name="b" oninput="clearResult()"></a>
-    <br><br><br>
-    <a> Valor de c: <input type="text" id="c" name="c" oninput="clearResult()"></a>
+    <a> Altura(m): <input type="text" id="height" name="height" oninput="clearResult()"></a>
     <br><br>
-    <button id="calculateButton" onclick="calculateBMI()">Calcular Média</button>
+    <button id="calculateButton" onclick="calculateBMI()">Calcular IMC</button>
     <br><br>
     <div class="aa" id="result"></div>
 
@@ -147,26 +148,24 @@ function clearResult() {
 }
 
 function calculateBMI() {
-    
-    let average_arithmetic;
-    let a = document.getElementById('a').value;
-    let b = document.getElementById('b').value;
-    let c = document.getElementById('c').value;
+    // Em JavaScript, usamos "let" para declarar variáveis (linhas "float BMI;", "float weight;", "float height;")
+    let BMI;
+    let weight = document.getElementById('weight').value;
+    let height = document.getElementById('height').value;
     
     // Substitui todas as vírgulas por pontos
-    a = a.replace(',', '.');
-    b = b.replace(',', '.');
-    c = c.replace(',', '.');
-    
-    average_arithmetic = (parseFloat(a) + parseFloat(b) + parseFloat(c)) / 3;
-    average_arithmetic = average_arithmetic.toFixed(2);
+    height = height.replace(',', '.');
 
+    // A operação matemática é a mesma em C e JavaScript (linha "BMI = (weight/(height * height));")
+    BMI = (weight/(height * height));
+    BMI = BMI.toFixed(2);
+
+    // Em JavaScript, usamos "alert" ou "console.log" para exibir a saída (linha 'printf("BMI: %f\n", BMI);')
     // Em HTML, usamos o método innerHTML para exibir a saída
-    document.getElementById('result').innerHTML = "Média aritmética: " + average_arithmetic;
+    document.getElementById('result').innerHTML = "IMC: " + BMI;
     document.getElementById('result').style.display = 'block';
-    document.getElementById('a').value = '';
-    document.getElementById('b').value = '';
-    document.getElementById('c').value = '';
+    document.getElementById('weight').value = '';
+    document.getElementById('height').value = '';
 }
 </script>
 
