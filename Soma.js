@@ -11,7 +11,6 @@ function calculateSum() {
     
     let x = 0;
     let sum = 0;
-    let i = 1;
     
     while (x >= 0) {
 
