@@ -5,115 +5,8 @@
 
     <link rel="icon" href="../GL.ico" type="image/x-icon">
 
-    <style>
-        body {
-            background-image: url('../fundo_site.png');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
+    <link rel="stylesheet" type="text/css" href="../index.css">
 
-        body {
-            caret-color: transparent;
-        }
-        
-        #x, #y{
-            caret-color: auto;
-        }
-        
-
-        h1 {
-            text-align: center;
-        }
-
-        .navbar {
-            overflow: hidden;
-            background-color: #333;
-          }
-      
-        .navbar a {
-        float: left;
-        display: block;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        }
-    
-        .navbar a:hover {
-        background-color: #ddd;
-        color: black;
-        }
-
-        a {
-            border: 2px solid black; /* Adiciona uma borda preta de 2px */
-            background-color: #5599ff; /* Define a cor de fundo para cinza claro */
-            padding: 10px; /* Adiciona um pouco de espaço ao redor do texto */
-
-            font-size: 30px; /* Aumenta o tamanho da fonte */
-            font-family: Arial, sans-serif; /* Muda a fonte para Arial */
-
-            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-         
-            color: #ffffff ;
-            
-        }
-
-        h1 {
-            border: 3px solid black; /* Adiciona uma borda preta de 2px ao texto */
-
-            text-align: left;
-            color: white;
-            border: 2px solid black; /* Adiciona uma borda preta de 2px */
-            background-color: #0000007c; /* Define a cor de fundo para cinza claro */
-            padding: 10px; /* Adiciona um pouco de espaço ao redor do texto */
-            font-size: 35px; /* Aumenta o tamanho da fonte */
-            font-family: Arial, sans-serif; /* Muda a fonte para Arial */
-
-            text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
-        }
-        h2 {
-            text-align: center;
-        }
-        .aa {
-            border: 2px solid black; /* Adiciona uma borda preta de 2px */
-            background-color: #5599ff; /* Define a cor de fundo para cinza claro */
-            padding: 10px; /* Adiciona um pouco de espaço ao redor do texto */
-
-            font-size: 30px; /* Aumenta o tamanho da fonte */
-            font-family: Arial, sans-serif; /* Muda a fonte para Arial */
-
-            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-         
-            color: #ffffff ;
-            display: none;
-            width: 33%;
-        }
-
-        .color {
-            background-color: #0066ff;
-          }
-
-        * {
-            caret-color: transparent;
-        }
-
-        #calculateButton {
-            font-size: 40px; /* Aumenta o tamanho da fonte */
-            padding: 20px 40px; /* Adiciona espaço ao redor do texto */
-            background-color: #5599ff; /* Muda a cor de fundo para verde */
-            color: white; /* Muda a cor do texto para branco */
-            border: 2px solid black;
-            cursor: pointer; /* Muda o cursor para um ponteiro quando você passa o mouse sobre o botão */
-            border-radius: 5px; /* Adiciona bordas arredondadas */
-            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-        }
-        
-        #calculateButton:hover {
-            background-color: #1a72f5; /* Muda a cor de fundo para um verde mais escuro quando você passa o mouse sobre o botão */
-        }
-    </style>
 </head>
 <body>
 
@@ -126,15 +19,16 @@
         <a href="../historico_202200145.pdf">Historico Academico</a>
         <!-- Adicione mais links conforme necessário -->
     </div>
-    <h2><a class="color">Soma Interativa</a></h2>
+    <h1><a class="color">Soma Interativa</a></h1>
     
 
-    <h1> Esse é um programa que soma <span style="color:red">números inteiros positivos</span> informados 
+    <div class="text-primary">
+        <p>Esse é um programa que soma <span style="color:red">números inteiros positivos</span> informados 
          pelo usuário <span style="color:red;">(um de cada vez)</span> até que um <span style="color:red">número negativo</span> seja informado 
          e então imprime o resultado da 
-         soma na tela.
-    </h1>
-
+         soma na tela.</p>
+    </div>
+    <br>
     <button id="calculateButton" onclick="calculateSum()" onclick="clearResult()">Clique aqui</button>
     <br><br>
     <div class="aa" id="result"></div>
