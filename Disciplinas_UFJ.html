@@ -48,10 +48,10 @@
       text-decoration: none;
 
     }
-    
+
     .link {
       border: 2px solid black;
-      background-color: #5599ff;
+      background-color: #5599ff;  /* Cor para o 1° período */
       padding: 10px;
       font-size: 30px;
       font-family: Arial, sans-serif;
@@ -62,11 +62,31 @@
       margin-bottom: 5px;
       display: inline-block;
     }
+
+    .link1 {
+      border: 2px solid black;
+      background-color: #0066ff;  /* Cor para o 1° período */
+      padding: 10px;
+      font-size: 30px;
+      font-family: Arial, sans-serif;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      color: #ffffff;
+      text-decoration: none;
+      white-space: nowrap;
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+
+    .color {
+      background-color: #0066ff;
+    }
+
     
     .link:hover {
       background-color: #ddd;
       color: black;
     }
+
 
     * {
       caret-color: transparent;
@@ -79,16 +99,18 @@
   <a href="./index.html">Redes Sociais</a>
   <a href="./Principais_Projetos.html">Projetos</a>
   <a href="./Sobre_mim.html"> Sobre </a>
-  <a href="./Disciplinas_UFJ.html">Disciplinas UFJ</a>
+  <a href="./Disciplinas_UFJ.html" class="color">Disciplinas UFJ</a>
   <a href="./historico_202200145.pdf">Historico Academico</a>
   <!-- Adicione mais links conforme necessário -->
 </div>
-<h1><a>Disciplinas UFJ</a></h1>
+<h1><a class="color">Disciplinas UFJ</a></h1>
 
-<br>
 
+<br><p class="link1">1° Período:</p><br>
 <a href="./Disciplinas_UFJ/ICC.html" class="link">Introdução à Ciência da Computação</a>
 <a href="./Disciplinas_UFJ/Computador_e_Sociedade.html" class="link">Computador e Sociedade</a>
+
+<br><p class="link1">2° Período:</p><br>
 <a href="./Disciplinas_UFJ/CVC.html" class="link">Carreira e Vivência na Computação</a>
   
 
