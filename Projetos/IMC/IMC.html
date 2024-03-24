@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IMC</title>
+
+    <link rel="icon" href="../../GL.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="../../index.css">
+    
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="../../index.html">Redes Sociais</a>
+        <a href="../../Principais_Projetos.html">Principais Projetos</a>
+        <a href="../../Todos_Projetos.html" class="color">Todos Projetos</a>
+        <a href="../../Sobre_mim.html">Sobre</a>
+        <a href="../../Disciplinas_UFJ.html">Disciplinas UFJ</a>
+        <a href="../../historico_202200145.pdf">Historico Academico</a>
+        <!-- Adicione mais links conforme necessário -->
+    </div>
+    <h1><a class="color">IMC</a></h1>
+    
+
+    <div class="text-primary"> <p>IMC, ou Índice de Massa Corporal, é um cálculo que permite avaliar se a pessoa está dentro do peso que é considerado ideal para a sua altura. 
+    <br><br>Digite o seu peso e a sua altura para saber o seu IMC: </p>
+    </div>
+
+    <!-- Em HTML, usamos tags de entrada para receber a entrada do usuário (linhas "printf("Digite seu peso: ");", "scanf("%f", &weight);") -->
+    <!-- Em HTML, usamos tags de entrada para receber a entrada do usuário (linhas "printf("Digite sua altura: ");", "scanf("%f", &height);") -->
+    <br>
+    <a> Peso(kg): <input type="text" id="weight" name="weight" oninput="clearResult()"></a>
+    <br><br><br>
+    <a> Altura(m): <input type="text" id="height" name="height" oninput="clearResult()"></a>
+    <br><br>
+    <button id="calculateButton" onclick="calculateBMI()">Calcular IMC</button>
+    <br><br>
+    <div class="aa" id="result"></div>
+
+    <script src = "IMC.js"></script>
+
+</body>
+</html>
