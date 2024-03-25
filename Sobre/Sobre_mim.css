@@ -53,8 +53,6 @@ background-color: #000000;
     padding: 14px 16px;
     text-decoration: none;
     margin:10px;
-    outline: 3px solid;
-    animation: rgb 2s linear infinite;
 }
 
 .navbar a:hover {
@@ -75,15 +73,4 @@ a, .common {
 
 .color {
     background-color: #0066ff;
-}
-
-@keyframes rgb {
-    0% {outline-color: red;}
-    14% {outline-color: orange;}
-    28% {outline-color: yellow;}
-    42% {outline-color: lime;}
-    57% {outline-color: blue;}
-    71% {outline-color: indigo;}
-    85% {outline-color: violet;}
-    100% {outline-color: red;}
 }
