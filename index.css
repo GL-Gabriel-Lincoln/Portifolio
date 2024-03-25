@@ -141,3 +141,21 @@ a, .common {
     outline: 4px solid;
     animation: rgb 2s linear infinite;
 }
+
+.inverted-container {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.inverted-navbar {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.inverted-border-black {
+    border-color: #ffffff;
+}
+
+.navbar a.inverted-border-white {
+    border-color: #000000;
+}
