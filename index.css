@@ -70,7 +70,7 @@ a, .common {
     border: 2px solid #000000;
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: #ffffff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -138,6 +138,7 @@ a, .common {
 }
 
 .container a {
+    color:black;
     outline: 4px solid;
     animation: rgb 2s linear infinite;
 }
