@@ -9,7 +9,7 @@ var defaultBackgroundImage = 'https://raw.githubusercontent.com/GL-Gabriel-Linco
                 localStorage.setItem('backgroundImage', defaultBackgroundImage);
             } else {
                 // Se a imagem de fundo atual for a padrão, muda para a outra
-                var newBackgroundImage = '../Imagens/fundo_site_black.png'; // Substitua pelo caminho da nova imagem de fundo
+                var newBackgroundImage = 'https://raw.githubusercontent.com/GL-Gabriel-Lincoln/Portifolio/1e18edf458e76933fcc9a68cbcb0b0aa83349cbe/fundo_site_black.png'; // Substitua pelo caminho da nova imagem de fundo
                 document.body.style.backgroundImage = "url('" + newBackgroundImage + "')";
                 localStorage.setItem('backgroundImage', newBackgroundImage);
             }
