@@ -78,7 +78,7 @@ a, .common {
 .container {
     display: flex;
     align-items: center;
-    justify-content: start;  
+    justify-content: start;
 }
 /* Estilos de botão */
 #calculateButton {
