@@ -142,6 +142,10 @@ a, .common {
     animation: rgb 2s linear infinite;
 }
 
+pre {
+    overflow-x: auto;
+  }
+
 
 
 
