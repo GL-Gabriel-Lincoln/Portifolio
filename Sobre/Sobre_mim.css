@@ -40,8 +40,9 @@ h2 {
   }
 
 .navbar {
-overflow: hidden;
-background-color: #000000;
+    display: flex;
+    overflow-x: auto;
+    background-color: #000000;
 }
 
 .navbar a {
