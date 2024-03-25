@@ -5,6 +5,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    padding-top: 75px;
 }
 
 h1 {
@@ -39,10 +40,14 @@ h2 {
     caret-color: transparent;
   }
 
-.navbar {
+  .navbar {
     display: flex;
     overflow-x: auto;
     background-color: #000000;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .navbar a {
@@ -54,6 +59,7 @@ h2 {
     padding: 14px 16px;
     text-decoration: none;
     margin:10px;
+    border-radius: 20px;
 }
 
 .navbar a:hover {
