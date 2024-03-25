@@ -43,7 +43,7 @@ h2 {
   .navbar {
     display: flex;
     overflow-x: auto;
-    background-color: #ffffff;
+    background-color: #ffffff00;
     position:fixed;
     top: 0;
     left: 0;

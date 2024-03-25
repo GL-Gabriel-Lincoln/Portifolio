@@ -59,7 +59,7 @@ a, .common {
 .navbar {
     display: flex;
     overflow-x: auto;
-    background-color: #ffffff;
+    background-color: #000000;
     position:fixed;
     top: 0;
     left: 0;
@@ -157,4 +157,8 @@ a, .common {
 }
 .container i{
     color: #ffffff;
+}
+hr {
+    border: none;
+    border-top: 2px solid #5599ff;
 }
