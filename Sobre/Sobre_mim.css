@@ -41,16 +41,20 @@ h2 {
 
 .navbar {
 overflow: hidden;
-background-color: #333;
+background-color: #000000;
 }
 
 .navbar a {
-float: left;
-display: block;
-color: #f2f2f2;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
+    border: 2px solid #ffffff;
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin:10px;
+    outline: 3px solid;
+    animation: rgb 2s linear infinite;
 }
 
 .navbar a:hover {
@@ -58,20 +62,28 @@ background-color: #ddd;
 color: black;
 }
 
-a {
-    border: 2px solid black; /* Adiciona uma borda preta de 2px */
-    background-color: #5599ff; /* Define a cor de fundo para cinza claro */
-    padding: 10px; /* Adiciona um pouco de espaço ao redor do texto */
-
-    font-size: 30px; /* Aumenta o tamanho da fonte */
-    font-family: Arial, sans-serif; /* Muda a fonte para Arial */
-
+a, .common {
+    border: 2px solid #000000;
+    background-color: #5599ff;
+    padding: 10px;
+    font-size: 30px;
+    font-family: Arial, sans-serif;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
- 
-    color: #ffffff ;
-    
+    color: #ffffff;
+    display: inline-block;
 }
 
 .color {
     background-color: #0066ff;
+}
+
+@keyframes rgb {
+    0% {outline-color: red;}
+    14% {outline-color: orange;}
+    28% {outline-color: yellow;}
+    42% {outline-color: lime;}
+    57% {outline-color: blue;}
+    71% {outline-color: indigo;}
+    85% {outline-color: violet;}
+    100% {outline-color: red;}
 }
