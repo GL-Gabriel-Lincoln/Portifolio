@@ -1,6 +1,6 @@
 /* Estilos básicos */
 body {
-    background-image: url('./fundo_site.png');
+    background-image: url('https://raw.githubusercontent.com/GL-Gabriel-Lincoln/Portifolio/1e18edf458e76933fcc9a68cbcb0b0aa83349cbe/fundo_site_black.png');
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -26,7 +26,7 @@ h1, h2 {
 }
 /* Estilos de link */
 a, .common {
-    border: 2px solid #000000;
+    border: 2px solid #ffffff;
     background-color: #5599ff;
     padding: 10px;
     font-size: 35px;
@@ -59,7 +59,7 @@ a, .common {
 .navbar {
     display: flex;
     overflow-x: auto;
-    background-color: #000000;
+    background-color: #ffffff;
     position:fixed;
     top: 0;
     left: 0;
@@ -67,7 +67,7 @@ a, .common {
 }
 
 .navbar a {
-    border: 2px solid #ffffff;
+    border: 2px solid #000000;
     float: left;
     display: block;
     color: #f2f2f2;
@@ -142,20 +142,19 @@ a, .common {
     animation: rgb 2s linear infinite;
 }
 
-.inverted-container {
+#changeBackground {
+    position: absolute;
+    top: 115px;
+    right: 0;
+    background: none !important;
+    border:none;
+}
+#changeBackground img {
+    width: 200px; /* Ajuste o valor conforme necessário */
+    height: auto;
+    border-radius: 100%;
+    border: 3px solid black;
+}
+.container i{
     color: #ffffff;
-    background-color: #000000;
-}
-
-.inverted-navbar {
-    color: #000000;
-    background-color: #ffffff;
-}
-
-.inverted-border-black {
-    border-color: #ffffff;
-}
-
-.navbar a.inverted-border-white {
-    border-color: #000000;
 }
