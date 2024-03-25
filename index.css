@@ -1,6 +1,6 @@
 /* Estilos básicos */
 body {
-    background-image: url('https://raw.githubusercontent.com/GL-Gabriel-Lincoln/Portifolio/1e18edf458e76933fcc9a68cbcb0b0aa83349cbe/fundo_site_black.png');
+    background-image: url('./fundo_site_black.png');
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;

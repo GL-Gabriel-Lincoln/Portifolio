@@ -43,7 +43,7 @@ h2 {
   .navbar {
     display: flex;
     overflow-x: auto;
-    background-color: #000000;
+    background-color: #ffffff;
     position:fixed;
     top: 0;
     left: 0;
@@ -51,7 +51,7 @@ h2 {
 }
 
 .navbar a {
-    border: 2px solid #ffffff;
+    border: 2px solid #000000;
     float: left;
     display: block;
     color: #f2f2f2;
@@ -68,7 +68,7 @@ color: black;
 }
 
 a, .common {
-    border: 2px solid #000000;
+    border: 2px solid #ffffff;
     background-color: #5599ff;
     padding: 10px;
     font-size: 35px;
