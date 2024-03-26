@@ -51,7 +51,7 @@ h2 {
 }
 
 .navbar a {
-    border: 2px solid #000000;
+    border: 3px solid #000000;
     float: left;
     display: block;
     color: #f2f2f2;
@@ -60,15 +60,21 @@ h2 {
     text-decoration: none;
     margin:10px;
     border-radius: 20px;
+    
 }
 
 .navbar a:hover {
-background-color: #ddd;
-color: black;
+    background-color: #ffffff;
+    color: black;
+    border-color: #5599ff;
+    transform: scale(1.20);
+    transition: all 0.1s ease-in-out;
+
+    margin-inline: 40px;
 }
 
 a, .common {
-    border: 2px solid #ffffff;
+    border: 3px solid #ffffff;
     background-color: #5599ff;
     padding: 10px;
     font-size: 35px;
