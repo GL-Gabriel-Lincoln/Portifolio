@@ -5,7 +5,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    padding-top: 115px;
 }
 
 h1 {
@@ -43,18 +42,18 @@ h2 {
   .navbar {
     display: flex;
     overflow-x: auto;
-    background-color: #ffffff00;
-    position:fixed;
+    position:relative;
     top: 0;
     left: 0;
     width: 100%;
+    white-space: nowrap;
 }
 
 .navbar a {
     border: 3px solid #000000;
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: #ffffff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -86,4 +85,14 @@ a, .common {
 
 .color {
     background-color: #0066ff;
+}
+
+.fade-out {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 124px;
+    background: linear-gradient(to left, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+    display: none;
 }
