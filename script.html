@@ -6,7 +6,9 @@
     async function callLambdaFunction() {
         const userInput = document.getElementById('userInput').value;
         const response = await fetch('https://nqi2zih7pd7woez6ah7fu2mjfe0mdfgu.lambda-url.us-east-2.on.aws/', {
-            method: 'POST',
+        
+        method: 'POST',
+        mode:'cors',
         headers: {
             'Content-Type': 'application/json',
         },
