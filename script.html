@@ -9,8 +9,10 @@
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                "Access-Control-Allow-Origin" : "*", // Permite todas as origens
-                "Access-Control-Allow-Credentials" : true // Permite cookies
+                "Access-Control-Allow-Origin" : "https://gl-gabriel-lincoln.github.io", // Permite apenas a origem do seu site
+                "Access-Control-Allow-Credentials" : true, // Permite cookies
+                "Access-Control-Allow-Headers": "Content-Type", // Permite o cabeçalho Content-Type
+                "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
             },
             body: JSON.stringify({text: userInput}),
         });
