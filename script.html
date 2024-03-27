@@ -9,6 +9,8 @@
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                "Access-Control-Allow-Origin" : "*", // Permite todas as origens
+                "Access-Control-Allow-Credentials" : true // Permite cookies
             },
             body: JSON.stringify({text: userInput}),
         });
