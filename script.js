@@ -1,6 +1,6 @@
 let userInput = document.getElementById('myInput').value;
 
-fetch('https://eldgrqwo3cbxq4wadgwepkc36u0qdqpz.lambda-url.us-east-2.on.aws/', {
+fetch('https://nqi2zih7pd7woez6ah7fu2mjfe0mdfgu.lambda-url.us-east-2.on.aws/', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
