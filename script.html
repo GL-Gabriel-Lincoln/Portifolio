@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Meu Site</title>
+    <title>Chamada de Função Lambda</title>
+    <script>
+    async function callLambdaFunction() {
+        const userInput = document.getElementById('userInput').value;
+        const response = await fetch('https://nqi2zih7pd7woez6ah7fu2mjfe0mdfgu.lambda-url.us-east-2.on.aws/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({text: userInput}),
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log(data);
+    }
+    </script>
 </head>
 <body>
-    <h1>Meu Site</h1>
-    <form id="meuForm">
-        <label for="myInput">Digite algo:</label><br>
-        <input type="text" id="myInput" name="myInput"><br>
-        <input type="button" value="Enviar" onclick="enviarTexto()">
+    <h1>Chamada de Função Lambda</h1>
+    <form onsubmit="event.preventDefault(); callLambdaFunction();">
+        <label for="userInput">Digite algo para escrever no arquivo:</label><br>
+        <input type="text" id="userInput" name="userInput"><br>
+        <input type="submit" value="Enviar">
     </form>
-    <script src="./script.js"></script>
 </body>
 </html>
