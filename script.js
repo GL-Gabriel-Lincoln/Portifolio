@@ -13,6 +13,20 @@ document.getElementById('texto2').addEventListener('keydown', function(e) {
     checkInputs();
 });
 
+function checkInputs() {
+    var texto1 = document.getElementById('texto1').value;
+    var texto2 = document.getElementById('texto2').value;
+
+    if(texto1 === "" || texto2 === "") {
+        alert("Por favor, preencha todos os campos.");
+    } else if(texto1.length < 8 || texto1.length > 20 || texto2.length < 8 || texto2.length > 30) {
+        alert("Por favor, verifique o comprimento dos seus textos.");
+    } else {
+        // Os inputs são válidos
+    }
+}
+
+
 document.getElementById('myForm').addEventListener('submit', function(e) {
     e.preventDefault();
     var texto1 = document.getElementById('texto1').value;
