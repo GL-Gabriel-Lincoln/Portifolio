@@ -1,18 +1,4 @@
 
-document.getElementById('texto1').addEventListener('keydown', function(e) {
-    if (e.key === ' ') {
-        e.preventDefault();
-    }
-    checkInputs();
-});
-
-document.getElementById('texto2').addEventListener('keydown', function(e) {
-    if (e.key === ' ') {
-        e.preventDefault();
-    }
-    checkInputs();
-});
-
 function checkInputs() {
     var texto1 = document.getElementById('texto1').value;
     var texto2 = document.getElementById('texto2').value;
@@ -26,6 +12,19 @@ function checkInputs() {
     }
 }
 
+document.getElementById('texto1').addEventListener('keydown', function(e) {
+    if (e.key === ' ') {
+        e.preventDefault();
+    }
+    checkInputs();
+});
+
+document.getElementById('texto2').addEventListener('keydown', function(e) {
+    if (e.key === ' ') {
+        e.preventDefault();
+    }
+    checkInputs();
+});
 
 document.getElementById('myForm').addEventListener('submit', function(e) {
     e.preventDefault();
