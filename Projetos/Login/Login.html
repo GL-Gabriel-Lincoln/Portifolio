@@ -22,16 +22,24 @@
         <!-- Adicione mais links conforme necessário -->
     </div>
     <hr>
-    <h1><a class="color">Login</a></h1>
+    <h1><a class="color">Login / Cadastro</a></h1>
+
+    <div class="text-primary"> <p> Para se logar ou cadastrar, preencha os campos de usuário e senha. O nome de usuário deve ter entre 8 e 20 caracteres e pode incluir letras, números, pontos e underlines. A senha deve ter entre 8 e 30 caracteres e pode incluir letras, números, pontos, asteriscos. Após preencher os campos, clique no botão ‘Enviar’.
+        </div><br>
 
     <form id="myForm">
-        
-        <a>User: <input type="text" id="texto1" name="texto1" pattern="[a-zA-Z0-9._]{8,20}" required></a><br>
-        
-        <a>Senha: <input type="text" id="texto2" name="texto2" pattern="[a-zA-Z0-9.*]{8,30}" required></a><br>
-        <a><input type="submit" value="Enviar" class="link" style="width: 200px;"></a>
+        <div styele="text-align: center;">
+            <div style="text-align: center; background-color: #0066ff; border: 2px solid #ffffff; padding: 20px; border-radius: 10px; width: 500px; height: 200px; margin-left: auto; margin-right: auto;">
+            <a>Usuário: <input type="text" id="texto1" name="texto1" pattern="[a-zA-Z0-9._]{8,20}" required></a><br>
+            
+            <a>Senha: <input type="text" id="texto2" name="texto2" pattern="[a-zA-Z0-9.*]{8,30}" required></a><br>
+            <input type="submit" value="Enviar" class="common link">
+            </div>
+        </div>
     </form>
-    <p class="common" id="mensagem"></p>
+    <div style="text-align: center; display: none; background-color: #0066ff; border: 2px solid #ffffff; padding: 20px; border-radius: 10px; width: 500px; height: 300px; margin-left: auto; margin-right: auto;" >
+        <div class="common" id="mensagem"></div>
+    </div>
     <script src="./login.js"></script>
     <script src="../../dv.js"></script>
 </body>

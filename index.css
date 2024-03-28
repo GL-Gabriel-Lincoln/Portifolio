@@ -134,7 +134,7 @@ a, .common {
     font-size: 75px;
 }
 /* Estilos de entrada */
-#weight, #height, #a, #b, #c, #x, #y {
+#weight, #height, #a, #b, #c, #x, #y, #texto1, #texto2 {
     caret-color: auto;
 }
 /* Estilos ocultos */
@@ -142,6 +142,7 @@ a, .common {
     display: none;
     width: 33%;
 }
+
 
 @keyframes rgb {
     0% {outline-color: red;}
