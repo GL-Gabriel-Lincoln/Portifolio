@@ -42,6 +42,12 @@ document.getElementById('texto2').addEventListener('paste', function(e) {
     }
 });
 
+document.getElementById('texto2').addEventListener('input', function(e) {
+    var regex = new RegExp("(.)\\1{4,}|(0123456789|9876543210)");
+    if (regex.test(this.value)) {
+        this.value = this.value.slice(0, -1);
+    }
+});
 
 document.getElementById('myForm').addEventListener('submit', function(e) {
 e.preventDefault();
