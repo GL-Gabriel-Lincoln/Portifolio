@@ -1,7 +1,3 @@
-document.getElementById('texto1').addEventListener('input', function(e) {
-    document.getElementById('texto2').disabled = !e.target.value;
-});
-
 document.getElementById('myForm').addEventListener('submit', function(e) {
     e.preventDefault();
     var texto1 = document.getElementById('texto1').value;
