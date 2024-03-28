@@ -13,7 +13,7 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
 e.preventDefault();
 var texto1 = document.getElementById('texto1').value;
 var texto2 = document.getElementById('texto2').value;
-fetch('https://ka4gmdhxnh.execute-api.us-east-2.amazonaws.com/default/escrever', {
+fetch('https://ka4gmdhxnh.execute-api.us-east-2.amazonaws.com/Teste/escrever', {
     method: 'POST',
     mode:'cors',
     headers: {
