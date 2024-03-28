@@ -10,8 +10,15 @@ document.getElementById('texto2').addEventListener('keydown', function(e) {
     }
 });
 
+document.getElementById('texto1').addEventListener('blur', function(e) {
+    if (this.value.length < 3) {
+        alert("O campo deve conter no mínimo 3 letras.");
+        this.focus();
+    }
+});
+
 document.getElementById('texto1').addEventListener('keypress', function(e) {
-    var regex = new RegExp("^[a-zA-Z0-9._]*$");
+    var regex = new RegExp("^[a-z0-9._]*$");
     var char = String.fromCharCode(!e.charCode ? e.which : e.charCode);
     if (!regex.test(char) || this.value.length >= 20) {
         e.preventDefault();
@@ -28,7 +35,7 @@ document.getElementById('texto2').addEventListener('keypress', function(e) {
 
 document.getElementById('texto1').addEventListener('paste', function(e) {
     var pasteData = e.clipboardData.getData('text');
-    var regex = new RegExp("^[a-zA-Z0-9._]*$");
+    var regex = new RegExp("^[a-z0-9._]*$");
     if (!regex.test(pasteData) || this.value.length >= 20) {
         e.preventDefault();
     }
@@ -43,11 +50,16 @@ document.getElementById('texto2').addEventListener('paste', function(e) {
 });
 
 function validateInput() {
+    var input2 = document.createElement("texto1").value;
     var input = document.getElementById('texto2').value;
-    var repeatCharRegex = /(.)\1{4,}/;
+    var repeatCharRegex = /([a-z])\1{4,}/;
     
     if(repeatCharRegex.test(input) || hasSimpleSequence(input)) {
         alert("A senha não deve conter sequências numéricas simples nem repetir um caractere mais de 4 vezes seguidas.");
+        return false;
+    }
+    if(repeatCharRegex.test(input2)) {
+        alert("A senha não deve repetir um caractere mais de 4 vezes seguidas.");
         return false;
     }
     return true;
