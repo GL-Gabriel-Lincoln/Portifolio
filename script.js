@@ -18,5 +18,6 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
     })
     .catch((error) => {
       console.error('Error:', error);
+      document.getElementById('mensagem').innerText = 'Erro ao enviar os dados.';
     });
 });
