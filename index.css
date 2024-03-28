@@ -1,6 +1,6 @@
 /* Estilos básicos */
 body {
-    background-image: url('.fundo_site_black.png');
+    background-image: url('./fundo_site_black.png');
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
