@@ -10,14 +10,25 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
         },
         body: JSON.stringify({texto1: texto1, texto2: texto2})
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw response;
+        }
+        return response.json();
+    })
     .then(data => {
         if (data.message) {
             document.getElementById('mensagem').innerText = data.message;
         }
     })
     .catch((error) => {
-      console.error('Error:', error);
-      document.getElementById('mensagem').innerText = 'Erro ao enviar os dados.';
+        if (error.status === 409) {
+            error.json().then(data => {
+                document.getElementById('mensagem').innerText = data.message;
+            });
+        } else {
+            console.error('Error:', error);
+            document.getElementById('mensagem').innerText = 'Erro ao enviar os dados.';
+        }
     });
 });
