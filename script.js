@@ -1,3 +1,7 @@
+document.getElementById('texto1').addEventListener('input', function(e) {
+    document.getElementById('texto2').disabled = !e.target.value;
+});
+
 document.getElementById('myForm').addEventListener('submit', function(e) {
     e.preventDefault();
     var texto1 = document.getElementById('texto1').value;
@@ -13,7 +17,7 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
     .then(response => response.json())
     .then(data => {
         if (data.message) {
-            document.getElementById('mensagem').innerText = data.message;
+            document.getElementById('mensagem').textContent = data.message;
         }
     })
     .catch((error) => {
