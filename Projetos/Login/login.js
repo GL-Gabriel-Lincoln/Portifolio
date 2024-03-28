@@ -42,14 +42,17 @@ document.getElementById('texto2').addEventListener('paste', function(e) {
     }
 });
 
-document.getElementById('texto2').addEventListener('input', function(e) {
-    var regex = new RegExp("(.)\\1{4,}|(0123456789|9876543210)");
-    if (regex.test(this.value)) {
-        this.setCustomValidity("Não é permitido ter sequência numérica simples ou repetir um caractere mais de 4 vezes seguidas.");
-    } else {
-        this.setCustomValidity("");
+function validateInput() {
+    var input = document.getElementById('texto2').value;
+    var simpleSequenceRegex = /(012|123|234|345|456|567|678|789|890)/;
+    var repeatCharRegex = /(.)\1{4,}/;
+    
+    if(simpleSequenceRegex.test(input) || repeatCharRegex.test(input)) {
+        alert("A senha não deve conter sequências numéricas simples nem repetir um caractere mais de 4 vezes seguidas.");
+        return false;
     }
-});
+    return true;
+}
 
 document.getElementById('myForm').addEventListener('submit', function(e) {
 e.preventDefault();
