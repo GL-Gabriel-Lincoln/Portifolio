@@ -10,22 +10,17 @@ document.getElementById('texto2').addEventListener('keydown', function(e) {
     }
 });
 
-document.getElementById('texto1').addEventListener('blur', function(e) {
-    if (this.value.length < 3) {
+document.getElementById('texto1').addEventListener('keyup', function(e) {
+    var regex = new RegExp("^[a-z]*$");
+    var char = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+    if (!regex.test(char)) {
+        e.preventDefault();
+    }
+    var letters = this.value.match(/[a-z]/g);
+    if (letters && letters.length < 3) {
         alert("O campo deve conter no mínimo 3 letras.");
-        this.focus();
     }
 });
-
-document.getElementById('seuFormulario').addEventListener('submit', function(e) {
-    var texto1 = document.getElementById('texto1');
-    if (texto1.value.length < 3) {
-        alert("O campo deve conter no mínimo 3 letras.");
-        texto1.focus();
-        e.preventDefault(); // impede o envio do formulário
-    }
-});
-
 
 document.getElementById('texto1').addEventListener('keypress', function(e) {
     var regex = new RegExp("^[a-z0-9._]*$");
