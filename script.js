@@ -1,15 +1,14 @@
-document.getElementById('texto1').addEventListener('keypress', function(e) {
-    var key = String.fromCharCode(!e.charCode ? e.which : e.charCode);
-    if (!/^[a-zA-Z0-9._-]+$/.test(key)) {
-       e.preventDefault();
+
+document.getElementById('texto1').addEventListener('keydown', function(e) {
+    if (e.key === ' ') {
+        e.preventDefault();
     }
     checkInputs();
 });
 
-document.getElementById('texto2').addEventListener('keypress', function(e) {
-    var key = String.fromCharCode(!e.charCode ? e.which : e.charCode);
-    if (!/^[a-zA-Z0-9.*]+$/.test(key)) {
-       e.preventDefault();
+document.getElementById('texto2').addEventListener('keydown', function(e) {
+    if (e.key === ' ') {
+        e.preventDefault();
     }
     checkInputs();
 });
