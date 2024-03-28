@@ -11,7 +11,11 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
         body: JSON.stringify({texto1: texto1, texto2: texto2})
     })
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => {
+        if (data.message) {
+            document.getElementById('mensagem').innerText = data.message;
+        }
+    })
     .catch((error) => {
       console.error('Error:', error);
     });
