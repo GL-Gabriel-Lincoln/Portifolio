@@ -10,12 +10,7 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
         },
         body: JSON.stringify({texto1: texto1, texto2: texto2})
     })
-    .then(response => {
-        if (!response.ok) {
-            throw response;
-        }
-        return response.json();
-    })
+    .then(response => response.json())
     .then(data => {
         if (data.message) {
             document.getElementById('mensagem').innerText = data.message;
