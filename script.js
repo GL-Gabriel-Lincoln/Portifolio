@@ -17,13 +17,6 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
         }
     })
     .catch((error) => {
-        if (error.status === 409) {
-            error.json().then(data => {
-                document.getElementById('mensagem').innerText = data.message;
-            });
-        } else {
-            console.error('Error:', error);
-            document.getElementById('mensagem').innerText = 'Erro ao enviar os dados.';
-        }
+      console.error('Error:', error);
     });
 });
