@@ -17,6 +17,16 @@ document.getElementById('texto1').addEventListener('blur', function(e) {
     }
 });
 
+document.getElementById('seuFormulario').addEventListener('submit', function(e) {
+    var texto1 = document.getElementById('texto1');
+    if (texto1.value.length < 3) {
+        alert("O campo deve conter no mínimo 3 letras.");
+        texto1.focus();
+        e.preventDefault(); // impede o envio do formulário
+    }
+});
+
+
 document.getElementById('texto1').addEventListener('keypress', function(e) {
     var regex = new RegExp("^[a-z0-9._]*$");
     var char = String.fromCharCode(!e.charCode ? e.which : e.charCode);
