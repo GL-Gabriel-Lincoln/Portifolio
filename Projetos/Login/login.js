@@ -44,14 +44,26 @@ document.getElementById('texto2').addEventListener('paste', function(e) {
 
 function validateInput() {
     var input = document.getElementById('texto2').value;
-    var simpleSequenceRegex = /(012|123|234|345|456|567|678|789|890)/;
     var repeatCharRegex = /(.)\1{4,}/;
     
-    if(simpleSequenceRegex.test(input) || repeatCharRegex.test(input)) {
+    if(repeatCharRegex.test(input) || hasSimpleSequence(input)) {
         alert("A senha não deve conter sequências numéricas simples nem repetir um caractere mais de 4 vezes seguidas.");
         return false;
     }
     return true;
+}
+
+function hasSimpleSequence(input) {
+    for(var i = 0; i < input.length - 2; i++) {
+        var first = input.charCodeAt(i);
+        var second = input.charCodeAt(i + 1);
+        var third = input.charCodeAt(i + 2);
+        
+        if(first + 1 === second && second + 1 === third) {
+            return true;
+        }
+    }
+    return false;
 }
 
 document.getElementById('myForm').addEventListener('submit', function(e) {
