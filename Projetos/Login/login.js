@@ -43,16 +43,16 @@ document.getElementById('texto2').addEventListener('paste', function(e) {
 });
 
 function validateInput() {
-    var input2 = document.createElement("texto1").value;
-    var input = document.getElementById('texto2').value;
+    var input = document.getElementById('texto1').value;
+    var input2 = document.getElementById('texto2').value;
     var repeatCharRegex = /([a-z])\1{4,}/;
-    
-    if(repeatCharRegex.test(input) || hasSimpleSequence(input)) {
-        alert("A senha não deve conter sequências numéricas simples nem repetir um caractere mais de 4 vezes seguidas.");
+
+    if(repeatCharRegex.test(input)) {
+        alert("A senha não deve repetir um caractere mais de 4 vezes seguidas.");
         return false;
     }
-    if(repeatCharRegex.test(input2)) {
-        alert("A senha não deve repetir um caractere mais de 4 vezes seguidas.");
+    if(repeatCharRegex.test(input2) || hasSimpleSequence(input2)) {
+        alert("A senha não deve conter sequências numéricas simples nem repetir um caractere mais de 4 vezes seguidas.");
         return false;
     }
     return true;
