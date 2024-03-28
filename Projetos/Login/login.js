@@ -10,18 +10,6 @@ document.getElementById('texto2').addEventListener('keydown', function(e) {
     }
 });
 
-document.getElementById('texto1').addEventListener('keyup', function(e) {
-    var regex = new RegExp("^[a-z]*$");
-    var char = String.fromCharCode(!e.charCode ? e.which : e.charCode);
-    if (!regex.test(char)) {
-        e.preventDefault();
-    }
-    var letters = this.value.match(/[a-z]/g);
-    if (letters && letters.length < 3) {
-        alert("O campo deve conter no mínimo 3 letras.");
-    }
-});
-
 document.getElementById('texto1').addEventListener('keypress', function(e) {
     var regex = new RegExp("^[a-z0-9._]*$");
     var char = String.fromCharCode(!e.charCode ? e.which : e.charCode);
