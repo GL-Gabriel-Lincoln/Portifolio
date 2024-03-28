@@ -45,7 +45,7 @@ document.getElementById('texto2').addEventListener('paste', function(e) {
 function validateInput() {
     var input = document.getElementById('texto1').value;
     var input2 = document.getElementById('texto2').value;
-    var repeatCharRegex = /([a-z])\1{4,}/;
+    var repeatCharRegex = /(.)\1{4,}/;
 
     if(repeatCharRegex.test(input)) {
         alert("A senha não deve repetir um caractere mais de 4 vezes seguidas.");
