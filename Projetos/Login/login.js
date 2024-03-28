@@ -48,7 +48,7 @@ function validateInput() {
     var repeatCharRegex = /(.)\1{4,}/;
 
     if(repeatCharRegex.test(input)) {
-        alert("A senha não deve repetir um caractere mais de 4 vezes seguidas.");
+        alert("Um caractere de usuario não deve repetir mais de 4 vezes seguidas.");
         return false;
     }
     if(repeatCharRegex.test(input2) || hasSimpleSequence(input2)) {
