@@ -12,18 +12,20 @@ function checkInputs() {
     }
 }
 
-document.getElementById('texto1').addEventListener('keydown', function(e) {
-    if (e.key === ' ') {
-        e.preventDefault();
-    }
-    checkInputs();
-});
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('texto1').addEventListener('keydown', function(e) {
+        if (e.key === ' ') {
+            e.preventDefault();
+        }
+        checkInputs();
+    });
 
-document.getElementById('texto2').addEventListener('keydown', function(e) {
-    if (e.key === ' ') {
-        e.preventDefault();
-    }
-    checkInputs();
+    document.getElementById('texto2').addEventListener('keydown', function(e) {
+        if (e.key === ' ') {
+            e.preventDefault();
+        }
+        checkInputs();
+    });
 });
 
 document.getElementById('myForm').addEventListener('submit', function(e) {
