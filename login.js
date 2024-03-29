@@ -99,7 +99,7 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
             document.getElementById('mensagem').textContent = data.message;
         }
         if (data.message === 'Usuário autenticado com sucesso!' || data.message === 'Usúario criado com sucesso!') {
-            window.location.href = './Programando/Programando.html';
+            window.location.href = './Projetos/Principais_Projetos.html';
         }
     })
     .catch((error) => {
