@@ -100,8 +100,6 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
         }
         if (data.message === 'Usuário autenticado com sucesso!' || data.message === 'Usúario criado com sucesso!') {
             window.location.href = 'suaNovaPagina.html';
-        } else {
-            alert('Usuário ou senha incorretos');
         }
     })
     .catch((error) => {
