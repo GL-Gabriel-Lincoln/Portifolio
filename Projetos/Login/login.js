@@ -71,6 +71,15 @@ function hasSimpleSequence(input) {
     return false;
 }
 
+function togglePasswordVisibility() {
+    var passwordInput = document.getElementById('texto2');
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+    } else {
+        passwordInput.type = "password";
+    }
+}
+
 document.getElementById('myForm').addEventListener('submit', function(e) {
 e.preventDefault();
 var texto1 = document.getElementById('texto1').value;

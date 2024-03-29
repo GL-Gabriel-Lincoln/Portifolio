@@ -3,6 +3,8 @@
 <head>
     <title>Login</title>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+
     <link rel="icon" href="../../GL.ico" type="image/x-icon">
 
     <link rel="stylesheet" type="text/css" href="../../index.css">
@@ -30,10 +32,11 @@
     <form id="myForm">
 
         <div style="text-align: center; background-color: #0066ff; border: 2px solid #ffffff; padding: 20px; border-radius: 10px; width: 500px; height: 200px; margin-left: auto; margin-right: auto;">
-            <a>Usuário: <input type="text" id="texto1" name="texto1" pattern="[a-zA-Z0-9._]{8,20}" required></a><br>
+            <a>Usuário: <input type="text" id="texto1" name="texto1" pattern="[a-zA0-9._]{8,20}" required></a><br>
             
-            <a>Senha: <input type="text" id="texto2" name="texto2" pattern="[a-zA-Z0-9.*]{8,30}" required></a><br>
-            <input type="submit" value="Enviar" class="common link" onclick="return validateInput()">
+            <a>Senha: <input type="password" id="texto2" name="texto2" pattern="[a-zA-Z0-9.*]{8,30}" required><button type="button" onclick="togglePasswordVisibility()"><i class="fas fa-eye"></i></button></a><br>
+            
+            <input type="submit" value="Entrar" class="common link" onclick="return validateInput()">
         </div>
        
     </form>
