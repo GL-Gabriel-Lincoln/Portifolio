@@ -80,6 +80,7 @@ a, .common {
     background-color: #ffffff;
     color: black;
     border-color: #5599ff;
+    text-shadow: -1px 0 #5599ff, 0 1px #5599ff, 1px 0 #5599ff, 0 -1px #5599ff;
     transform: scale(1.20);
     transition: all 0.1s ease-in-out;
 
@@ -89,6 +90,7 @@ a, .common {
     background-color: #ffffff;
     color: black;
     border-color: #5599ff;
+    text-shadow: -1px 0 #5599ff, 0 1px #5599ff, 1px 0 #5599ff, 0 -1px #5599ff;
     transform: scale(1.12);
     transition: all 0.1s ease-in-out;
 
@@ -134,7 +136,7 @@ a, .common {
     font-size: 75px;
 }
 /* Estilos de entrada */
-#weight, #height, #a, #b, #c, #x, #y, #texto1, #texto2 {
+#weight, #height, #a, #b, #c, #x, #y, #texto1, #texto2, #myInput {
     caret-color: auto;
 }
 /* Estilos ocultos */
