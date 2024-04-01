@@ -55,6 +55,11 @@ a, .common {
     
 }
 /* Estilos de navbar */
+.navbar-container {
+    position: relative;
+    width: 100%;
+}
+
 .navbar {
     display: flex;
     overflow-x: auto;
@@ -62,7 +67,21 @@ a, .common {
     top: 0;
     left: 0;
     width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: #06f transparent;
 }
+
+.fade-out {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    background: linear-gradient(to left, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+    opacity: 1;
+}
+
 
 .navbar a {
     border: 3px solid #ffffff;
@@ -184,19 +203,3 @@ hr {
     border: none;
     border-top: 10px solid #ffffff;
 } 
-
-.navbar {
-    position: relative;
-    overflow-x: auto;
-    white-space: nowrap;
-}
-
-.fade-out {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 50px;
-    height: 124px;
-    background: linear-gradient(to left, rgb(255, 255, 255), rgba(255, 255, 255, 0));
-    display: none;
-}

@@ -39,14 +39,29 @@ h2 {
     caret-color: transparent;
   }
 
-  .navbar {
+.navbar-container {
+    position: relative;
+    width: 100%;
+}
+
+.navbar {
     display: flex;
     overflow-x: auto;
     position:relative;
     top: 0;
     left: 0;
     width: 100%;
-    white-space: nowrap;
+}
+
+.fade-out {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    background: linear-gradient(to left, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+    opacity: 1;
 }
 
 .navbar a {
@@ -85,14 +100,4 @@ a, .common {
 
 .color {
     background-color: #0066ff;
-}
-
-.fade-out {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 50px;
-    height: 124px;
-    background: linear-gradient(to left, rgb(255, 255, 255), rgba(255, 255, 255, 0));
-    display: none;
 }

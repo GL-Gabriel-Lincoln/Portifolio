@@ -1,18 +1,15 @@
 var navbar = document.querySelector('.navbar');
-var fadeout = document.querySelector('.fade-out');
+var fadeOut = document.querySelector('.fade-out');
 
-// Função para verificar a posição da barra de rolagem
 function checkScroll() {
     var maxScrollLeft = navbar.scrollWidth - navbar.clientWidth;
     if (navbar.scrollLeft >= maxScrollLeft - 10) { // 10 é um valor de tolerância
-        fadeout.style.display = 'none';
+        fadeOut.style.opacity = '0';
     } else {
-        fadeout.style.display = 'block';
+        fadeOut.style.opacity = '1';
     }
 }
 
-// Adicione o ouvinte de evento de rolagem ao navbar
+checkScroll(); // Chama a função imediatamente
 navbar.addEventListener('scroll', checkScroll);
-
-// Verifique inicialmente se o desvanecimento deve ser exibido
 window.addEventListener('load', checkScroll);
