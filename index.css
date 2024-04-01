@@ -67,7 +67,6 @@ a, .common {
     top: 0;
     left: 0;
     width: 100%;
-    scrollbar-width: thin;
     scrollbar-color: #06f transparent;
 }
 
