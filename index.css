@@ -44,6 +44,7 @@ a, .common {
     animation: rgb 2s linear infinite;
     margin:10px;
     border-radius: 20px;
+    transition: all 0.5s;
 }
 
 .link1 {
@@ -93,6 +94,7 @@ a, .common {
     text-decoration: none;
     margin:10px;
     border-radius: 20px;
+    transition: all 0.5s;
 }
 
 .navbar a:hover, .link1 a:hover, h2 a:hover {
@@ -101,7 +103,6 @@ a, .common {
     border-color: #5599ff;
     text-shadow: -1px 0 #5599ff, 0 1px #5599ff, 1px 0 #5599ff, 0 -1px #5599ff;
     transform: scale(1.20);
-    transition: all 0.5s ease-in-out;
 
     margin-inline: 40px;
 }
@@ -111,7 +112,6 @@ a, .common {
     border-color: #5599ff;
     text-shadow: -1px 0 #5599ff, 0 1px #5599ff, 1px 0 #5599ff, 0 -1px #5599ff;
     transform: scale(1.12);
-    transition: all 0.5s ease-in-out;
 
     margin-inline: 55px;
 
@@ -120,7 +120,6 @@ a, .common {
     background-color: #000000;
     color:#ffffff;
     transform: scale(1.25);
-    transition: all 0.3s ease-in-out;
     margin-left:50px;
     
 }
@@ -181,6 +180,7 @@ a, .common {
     color: #000000;
     outline: 4px solid;
     animation: rgb 2s linear infinite;
+    transition: all 0.5s;
 }
 
 #changeBackground {
