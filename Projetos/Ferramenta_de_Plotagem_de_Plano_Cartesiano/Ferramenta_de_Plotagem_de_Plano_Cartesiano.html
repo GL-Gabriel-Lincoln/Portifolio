@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ferramenta de Plotagem de Plano Cartesiano</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="/Portifolio/index.css">
+</head>
+<body>
+
+    <div class="navbar-container">
+        <div class="navbar">
+        <img src="/Portifolio/GL sem fundo.png" alt="Descrição da imagem" width="50" height="50" class="logo-image">
+        <a href="/Portifolio/index.html">Redes Sociais</a>
+        <a href="/Portifolio/Projetos/Principais_Projetos.html" class="color">Projetos</a>
+        <a href="/Portifolio/Sobre/Sobre_mim.html"> Sobre </a>
+        <a href="/Portifolio/Disciplinas_UFJ/Disciplinas_UFJ.html">Disciplinas UFJ</a>
+        <a href="/Portifolio/Programando/Programando.html">Programando</a>
+        <a href="/Portifolio/historico_202200145.pdf">Historico Academico</a>
+        </div>
+        <div class="fade-out"></div>
+    </div>
+    <hr>
+
+    <br><div class="title-bar"><h1><a class="color">Ferramenta de Plotagem de Plano Cartesiano</a></h1></div><br>
+
+    <hr>
+
+    <div>
+        <label for="x" class="common">X:<input type="number" id="x" name="x"></label>
+        
+        <label for="y" class="common">Y:<input type="number" id="y" name="y"></label>
+        <br>
+        <button class="common link" onclick="addPoint()">Adicionar ponto</button>
+        <button class="common link" onclick="clearPoints()">Limpar pontos</button>
+    </div>
+    <canvas id="myChart"></canvas>
+    <script src="./Ferramenta_de_Plotagem_de_Plano_Cartesiano.js"></script>
+</body>
+</html>

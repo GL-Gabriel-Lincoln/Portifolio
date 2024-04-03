@@ -128,6 +128,7 @@ a, .common {
     display: flex;
     align-items: center;
     justify-content: start;
+    text-align: start;
 }
 /* Estilos de botão */
 #calculateButton {
@@ -181,6 +182,7 @@ a, .common {
     outline: 4px solid;
     animation: rgb 2s linear infinite;
     transition: all 0.5s;
+    border: 2px solid #000000;
 }
 
 #changeBackground {
@@ -216,4 +218,12 @@ hr {
     width: 100%;
     height: 80px; /* Ajuste este valor para alterar a altura da barra do título */
     background-color: #5599ff;
+}
+
+#myChart {
+
+    width: 1px;
+    height: 1px;
+    outline: 3px solid;
+    color: #5599ff;
 }
