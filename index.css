@@ -5,6 +5,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    
+
 }
 * {
     caret-color: transparent;
@@ -226,4 +228,17 @@ hr {
     height: 1px;
     outline: 3px solid;
     color: #5599ff;
+}
+
+.common1 {
+    border: 3px solid #ffffff;
+    background-color: #5599ff;
+    padding: 10px;
+    font-size: 26px;
+    font-family: Arial, sans-serif;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: #ffffff;
+    display: inline-block;
+    border-radius: 20px;
+    
 }
