@@ -258,3 +258,6 @@ hr {
     border-bottom: 10px solid #ffffff;
 }
 
+.title-bar h1 {
+    width: 200px; /* or a width that fits your needs */
+}  
