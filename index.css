@@ -259,5 +259,9 @@ hr {
 }
 
 .title-bar h1 {
-    width: 200px; /* or a width that fits your needs */
-}  
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
