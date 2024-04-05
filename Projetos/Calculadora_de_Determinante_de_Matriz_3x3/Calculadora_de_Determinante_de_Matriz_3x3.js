@@ -19,4 +19,16 @@ function calculateDeterminant() {
     // Exibir o determinante
     document.getElementById('result').style.display = 'inline-block';
     document.getElementById('result').innerHTML = "O determinante da matriz é: " + determinant;
+
+    document.getElementById('l1c1').value = ''; 
+    document.getElementById('l1c2').value = ''; 
+    document.getElementById('l1c3').value = ''; 
+    document.getElementById('l2c1').value = ''; 
+    document.getElementById('l2c2').value = ''; 
+    document.getElementById('l2c3').value = ''; 
+    document.getElementById('l3c1').value = ''; 
+    document.getElementById('l3c2').value = ''; 
+    document.getElementById('l3c3').value = ''; 
+   
 }
+

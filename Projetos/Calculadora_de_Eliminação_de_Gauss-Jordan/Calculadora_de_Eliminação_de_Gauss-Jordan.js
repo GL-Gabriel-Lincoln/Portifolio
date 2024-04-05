@@ -41,19 +41,16 @@ function gaussJordan() {
         matrixDiv.innerHTML += '<br>';
     }
 
-   
-        document.getElementById('l1c1').value = ''; 
-        document.getElementById('l1c2').value = ''; 
-        document.getElementById('l1c3').value = ''; 
-        document.getElementById('l1c4').value = '';
-        document.getElementById('l2c1').value = ''; 
-        document.getElementById('l2c2').value = ''; 
-        document.getElementById('l2c3').value = ''; 
-        document.getElementById('l2c4').value = '';
-        document.getElementById('l3c1').value = ''; 
-        document.getElementById('l3c2').value = ''; 
-        document.getElementById('l3c3').value = ''; 
-        document.getElementById('l3c4').value = '';
-        console.log("Inputs cleared!");
-   
+    document.getElementById('l1c1').value = ''; 
+    document.getElementById('l1c2').value = ''; 
+    document.getElementById('l1c3').value = ''; 
+    document.getElementById('l1c4').value = '';
+    document.getElementById('l2c1').value = ''; 
+    document.getElementById('l2c2').value = ''; 
+    document.getElementById('l2c3').value = ''; 
+    document.getElementById('l2c4').value = '';
+    document.getElementById('l3c1').value = ''; 
+    document.getElementById('l3c2').value = ''; 
+    document.getElementById('l3c3').value = ''; 
+    document.getElementById('l3c4').value = '';
 }
