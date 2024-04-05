@@ -260,9 +260,14 @@ hr {
 
 .title-bar h1 {
     width: 100%;
-    white-space: normal;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
+}
+@media (max-width: 768px) {
+.title-bar h1 a {
+    font-size: 15px;
+}
+}
   
   
