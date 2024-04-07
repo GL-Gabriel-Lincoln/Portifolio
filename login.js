@@ -84,6 +84,7 @@ function togglePasswordVisibility() {
 
 document.getElementById("myForm").addEventListener("submit", function (e) {
   e.preventDefault();
+  document.getElementById('myLoader').style.display = 'block';
   var texto1 = document.getElementById("texto1").value;
   var texto2 = document.getElementById("texto2").value;
   fetch(
@@ -99,6 +100,7 @@ document.getElementById("myForm").addEventListener("submit", function (e) {
   )
     .then((response) => response.json())
     .then((data) => {
+      document.getElementById('myLoader').style.display = 'none';
       if (data.message) {
         document.getElementById("mensagem").style.display = "inline-block";
         document.getElementById("mensagem").textContent = data.message;

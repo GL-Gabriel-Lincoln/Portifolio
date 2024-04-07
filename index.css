@@ -1,9 +1,9 @@
 /* Estilos básicos */
 body {
+  background-attachment: fixed;
   background-color: #000000;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
 }
 * {
@@ -15,47 +15,47 @@ h2 {
   text-align: center;
 }
 .text-primary {
-  border: 3px solid rgb(255, 255, 255);
-  text-align: left;
-  color: rgb(0, 0, 0);
   background-color: #ffffffbc;
-  padding: 10px;
-  font-size: 45px;
+  border: 3px solid rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-family: Arial, sans-serif;
+  font-size: 45px;
+  padding: 10px;
+  text-align: left;
   text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
 }
 /* Estilos de link */
 a,
 .common {
-  border: 3px solid #ffffff;
   background-color: #5599ff;
-  padding: 10px;
-  font-size: 35px;
-  font-family: Arial, sans-serif;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  border: 3px solid #ffffff;
+  border-radius: 20px;
   color: #ffffff;
   display: inline-block;
-  border-radius: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 35px;
+  padding: 10px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   transition: all 0.5s;
 }
 .link {
-  text-decoration: none;
-  white-space: nowrap;
-  margin-bottom: 5px;
-  display: inline-block;
-  outline: 3px solid;
   animation: rgb 2s linear infinite;
-  margin: 10px;
   border-radius: 20px;
+  display: inline-block;
+  margin: 10px;
+  margin-bottom: 5px;
+  outline: 3px solid;
+  text-decoration: none;
   transition: all 0.5s;
+  white-space: nowrap;
 }
 
 .link1 {
-  text-decoration: none;
-  white-space: nowrap;
-  margin-bottom: 5px;
   display: inline-block;
   margin: 10px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  white-space: nowrap;
 }
 /* Estilos de navbar */
 .navbar-container {
@@ -65,40 +65,41 @@ a,
 
 .navbar {
   display: flex;
+  left: 0;
   overflow-x: auto;
   position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  scrollbar-width: thin;
   scrollbar-color: #06f transparent;
+  scrollbar-width: thin;
+  top: 0;
+  width: 100%;
 }
 
 .fade-out {
   content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100px;
   height: 100%;
-  background: linear-gradient(
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+
+background: linear-gradient(
     to left,
     rgb(255, 255, 255),
     rgba(255, 255, 255, 0)
   );
-  opacity: 1;
 }
 
 .navbar a {
   border: 3px solid #ffffff;
-  float: left;
-  display: block;
-  color: #ffffff;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  margin: 10px;
   border-radius: 20px;
+  color: #ffffff;
+  display: block;
+  float: left;
+  margin: 10px;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
   transition: all 0.5s;
 }
 
@@ -106,58 +107,55 @@ a,
 .link1 a:hover,
 h2 a:hover {
   background-color: #ffffff;
-  color: black;
   border-color: #5599ff;
+  color: black;
+  margin-inline: 40px;
   text-shadow: -1px 0 #5599ff, 0 1px #5599ff, 1px 0 #5599ff, 0 -1px #5599ff;
   transform: scale(1.2);
-
-  margin-inline: 40px;
 }
 
 h2 a:hover {
   background-color: #ffffff;
-  color: black;
   border-color: #000000;
+  color: black;
+  margin-inline: 40px;
   text-shadow: -1px 0 #5599ff, 0 1px #5599ff, 1px 0 #5599ff, 0 -1px #5599ff;
   transform: scale(1.2);
-
-  margin-inline: 40px;
 }
 
 .link:hover {
   background-color: #ffffff;
-  color: black;
   border-color: #5599ff;
+  color: black;
+  margin-inline: 55px;
   text-shadow: -1px 0 #5599ff, 0 1px #5599ff, 1px 0 #5599ff, 0 -1px #5599ff;
   transform: scale(1.12);
-
-  margin-inline: 55px;
 }
 .container a:hover {
   background-color: #000000;
   color: #ffffff;
-  transform: scale(1.25);
   margin-left: 50px;
+  transform: scale(1.25);
 }
 /* Estilos de container */
 .container {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: start;
   text-align: start;
 }
 /* Estilos de botão */
 #calculateButton {
-  font-size: 40px;
-  padding: 20px 40px;
-  background-color: #5599ff;
-  color: white;
-  border: 3px solid rgb(255, 255, 255);
-  cursor: pointer;
-  border-radius: 40px;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  outline: 3px solid;
   animation: rgb 2s linear infinite;
+  background-color: #5599ff;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 40px;
+  color: white;
+  cursor: pointer;
+  font-size: 40px;
+  outline: 3px solid;
+  padding: 20px 40px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 #calculateButton:hover {
   background-color: #1a72f5;
@@ -217,26 +215,28 @@ h2 a:hover {
 }
 
 .container a {
+  animation: rgb 2s linear infinite;
   background-color: rgb(255, 255, 255);
+  border: 2px solid #000000;
   color: #000000;
   outline: 4px solid;
-  animation: rgb 2s linear infinite;
   transition: all 0.5s;
-  border: 2px solid #000000;
 }
 
 #changeBackground {
-  position: absolute;
-  top: 115px;
-  right: 0;
   background: none !important;
   border: none;
+  position: absolute;
+  right: 0;
+  top: 115px;
 }
 #changeBackground img {
-  width: 200px; /* Ajuste o valor conforme necessário */
-  height: auto;
-  border-radius: 100%;
   border: 3px solid black;
+  border-radius: 100%;
+  height: auto;
+  width: 200px;
+
+  /* Ajuste o valor conforme necessário */
 }
 .container i {
   color: #ffffff;
@@ -251,44 +251,63 @@ hr {
 }
 
 #myChart {
-  width: 1px;
+  color: #5599ff;
   height: 1px;
   outline: 3px solid;
-  color: #5599ff;
+  width: 1px;
 }
 
 .common1 {
-  border: 3px solid #ffffff;
   background-color: #5599ff;
-  padding: 10px;
-  font-size: 26px;
-  font-family: Arial, sans-serif;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  border: 3px solid #ffffff;
+  border-radius: 20px;
   color: #ffffff;
   display: inline-block;
-  border-radius: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 26px;
+  padding: 10px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .title-bar {
-  display: flex;
   align-items: center;
+  background-color: #5599ff;
+  border-bottom: 10px solid #ffffff;
+  border-top: 10px solid #ffffff;
+  display: flex;
+  height: 80px;
   justify-content: center;
   position: relative;
   width: 100%;
-  height: 80px;
-  background-color: #5599ff;
-  border-top: 10px solid #ffffff;
-  border-bottom: 10px solid #ffffff;
 }
 
 .title-bar h1 {
-  width: 100%;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
 }
 @media (max-width: 768px) {
   .title-bar h1 a {
     font-size: 15px;
   }
+}
+
+#myLoader {
+  animation: spin 2s linear infinite;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  display: none;
+  height: 120px;
+  width: 120px;
+}
+
+@keyframes spin {
+  0% {
+ transform: rotate(0deg);
+}
+  100% {
+ transform: rotate(360deg);
+}
 }
