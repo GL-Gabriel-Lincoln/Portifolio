@@ -65,12 +65,12 @@ a,
 
 .navbar {
   display: flex;
-
   overflow-x: auto;
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
+  scrollbar-width: thin;
   scrollbar-color: #06f transparent;
 }
 
