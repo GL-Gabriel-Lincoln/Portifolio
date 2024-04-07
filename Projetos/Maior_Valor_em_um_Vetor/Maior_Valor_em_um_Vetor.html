@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Maior Valor em um Vetor</title>
 
-    <meta name="viewport" content="user-scalable=no">
+    <meta name="viewport" content="user-scalable=no" />
 
-    <link rel="icon" href="../../GL.ico" type="image/x-icon">
+    <link rel="icon" href="../../GL.ico" type="image/x-icon" />
 
-    <link rel="stylesheet" type="text/css" href="../../index.css">
+    <link rel="stylesheet" type="text/css" href="../../index.css" />
 
-    <script src="https://unpkg.com/react@17/umd/react.production.min.js"> </script>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div class="title-bar">
+      <h1><a class="color">Maior Valor em um Vetor</a></h1>
+    </div>
+    <br />
 
-</head>
-<body>
-
-<div id="navbar"></div>
-<div class="title-bar"><h1><a class="color">Maior Valor em um Vetor</a></h1></div><br>
-
-<a>Vetor: <input type="text" id="myInput"></a><br><br>
+    <a>Vetor: <input type="text" id="myInput" /></a><br /><br />
 
     <button id="calculateButton" onclick="findMax()">Enviar</button>
 
-    <br><br><div class="common" style="display: none;" id="result"></div><br><br>
+    <br /><br />
+    <div class="common" style="display: none" id="result"></div>
+    <br /><br />
 
-    <div class="text-primary"><p>
-        ⚫Este programa foi projetado para aceitar um vetor e determinar qual desses elementos é o maior. 
-        <br><br>⚫Por favor, insira números separados por vírgulas. 
-        <br><br>⚫Por exemplo, você pode inserir ‘5, 3, 9, 1, 2’ 
-        <br><br>⚫Após inserir os números, clique no botão ‘Enviar’ para ver o resultado.</p>
+    <div class="text-primary">
+      <p>
+        ⚫Este programa foi projetado para aceitar um vetor e determinar qual
+        desses elementos é o maior.
+        <br /><br />⚫Por favor, insira números separados por vírgulas.
+        <br /><br />⚫Por exemplo, você pode inserir ‘5, 3, 9, 1, 2’
+        <br /><br />⚫Após inserir os números, clique no botão ‘Enviar’ para ver
+        o resultado.
+      </p>
     </div>
 
     <script src="./Maior_Valor_em_um_Vetor.js"></script>
     <script src="./navbar.js"></script>
     <script src="./ScrollFadeControl.js"></script>
-</body>
+  </body>
 </html>

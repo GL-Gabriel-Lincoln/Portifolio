@@ -1,54 +1,103 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Login</title>
 
-    <meta name="viewport" content="user-scalable=no">
+    <meta name="viewport" content="user-scalable=no" />
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    />
 
-    <link rel="icon" href="./GL.ico" type="image/x-icon">
+    <link rel="icon" href="./GL.ico" type="image/x-icon" />
 
-    <link rel="stylesheet" type="text/css" href="./index.css">
-    
-    <script src="https://unpkg.com/react@17/umd/react.production.min.js"> </script>
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
-
-</head>
-<body>
-
+  </head>
+  <body>
     <div id="navbar"></div>
-   
-    <div class="title-bar"><h1><a class="color">Login / Cadastro</a></h1></div><br>
+
+    <div class="title-bar">
+      <h1><a class="color">Login / Cadastro</a></h1>
+    </div>
+    <br />
 
     <form id="myForm">
+      <div
+        style="
+          text-align: center;
+          background-color: #0066ff;
+          border: 2px solid #ffffff;
+          padding: 20px;
+          border-radius: 10px;
+          width: 500px;
+          height: 200px;
+          margin-left: auto;
+          margin-right: auto;
+        "
+      >
+        <a
+          >Usuário:
+          <input
+            style="border-radius: 10px"
+            type="text"
+            id="texto1"
+            name="texto1"
+            pattern="[a-zA0-9._]{8,20}"
+            required /></a
+        ><br /><br />
 
-        <div style="text-align: center; background-color: #0066ff; border: 2px solid #ffffff; padding: 20px; border-radius: 10px; width: 500px; height: 200px; margin-left: auto; margin-right: auto;">
-            <a>Usuário: <input style="border-radius: 10px;" type="text" id="texto1" name="texto1" pattern="[a-zA0-9._]{8,20}" required></a><br><br>
-            
-            <a>Senha: <input style="border-radius: 10px;" type="password" id="texto2" name="texto2" pattern="[a-zA-Z0-9.*]{8,30}" required><button style="border-radius: 10px;" type="button" onclick="togglePasswordVisibility()"><i class="fas fa-eye"></i></button></a><br>
-            <div class="center">
-            <input type="submit" value="Entrar" class="common1 link" onclick="return validateInput()">
-            </div>
+        <a
+          >Senha:
+          <input
+            style="border-radius: 10px"
+            type="password"
+            id="texto2"
+            name="texto2"
+            pattern="[a-zA-Z0-9.*]{8,30}"
+            required /><button
+            style="border-radius: 10px"
+            type="button"
+            onclick="togglePasswordVisibility()"
+          >
+            <i class="fas fa-eye"></i></button></a
+        ><br />
+        <div class="center">
+          <input
+            type="submit"
+            value="Entrar"
+            class="common1 link"
+            onclick="return validateInput()"
+          />
         </div>
-       
+      </div>
     </form>
-    <br>
-    <div style="text-align: center;">
-        <div class="common" style="display: none;" id="mensagem"></div>
+    <br />
+    <div style="text-align: center">
+      <div class="common" style="display: none" id="mensagem"></div>
     </div>
 
-    <div class="text-primary" style="font-size: 30px;"> <p> 
-        ⚫Para se logar ou cadastrar, preencha os campos de usuário e senha. 
-        <br><br>⚫O nome de usuário deve ter entre 8 e 20 caracteres e pode incluir <span style="color:red">letras minúsculas</span>, números, pontos e underlines. <span style="color:#0066ff">Exemplo: user._.2803</span>
-        <br><br>⚫A senha deve ter entre 8 e 30 caracteres e pode incluir letras, números, pontos, asteriscos. <span style="color:#0066ff">Exemplo: Senha1213.*</span>  
-        <br><br>⚫Após preencher os campos, clique no botão ‘Entrar’.
-        </div><br>
+    <div class="text-primary" style="font-size: 30px">
+      <p>
+        ⚫Para se logar ou cadastrar, preencha os campos de usuário e senha.
+        <br /><br />⚫O nome de usuário deve ter entre 8 e 20 caracteres e pode
+        incluir <span style="color: red">letras minúsculas</span>, números,
+        pontos e underlines.
+        <span style="color: #0066ff">Exemplo: user._.2803</span> <br /><br />⚫A
+        senha deve ter entre 8 e 30 caracteres e pode incluir letras, números,
+        pontos, asteriscos.
+        <span style="color: #0066ff">Exemplo: Senha1213.*</span>
+        <br /><br />⚫Após preencher os campos, clique no botão ‘Entrar’.
+      </p>
+    </div>
 
-    
+    <br />
+
     <script src="./login.js"></script>
     <script src="./navbar.js"></script>
     <script src="./ScrollFadeControl.js"></script>
-    
-</body>
+  </body>
 </html>
