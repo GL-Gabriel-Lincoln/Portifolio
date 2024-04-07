@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Programando #03</title>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="/Portifolio/GL.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="/Portifolio/index.css" />
+
+    <meta charset="UTF-8" />
+
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <div style="text-align: center">
+      <br />
+      <div class="title-bar">
+        <h1><a class="color">Programando #03</a></h1>
+      </div>
+      <br />
+    </div>
+
+    <iframe
+      width="912"
+      height="513"
+      src="https://www.youtube.com/embed/8TyMuOx8Bw4"
+      title="Programando #03"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+
+    <br /><br /><a>Ex5_circle.c</a><br /><br />
+
+    <pre><code class="language-c">
+
+/*Escreva um programa em C que leia o valor do raio de um círculo e
+calcule a circunferência e a área do círculo. A fórmula para calcular a
+circunferência é: 2 * PI * raio e a fórmula para calcular a área é: PI *
+raio * raio. O programa deve imprimir os resultados na tela.*/
+
+#include &lt;stdio.h&gt;
+
+#define PI 3.14
+
+int main(){
+
+float ray;
+float area;
+float circumference;
+
+printf ("Enter the value of the radius: ");
+scanf("%f",&ray);
+
+circumference = 2 * PI * ray;
+area = PI * (ray * ray);
+
+printf ("Area: %f\n", area);
+printf ("Circumference: %f\n", circumference);
+
+return 0;
+}
+
+</code></pre>
+
+    <br /><a>Ex6_auxiliary.c</a><br /><br />
+
+    <pre><code class="language-c">
+
+/*Escreva um programa em C que leia o valor de duas variáveis inteiras
+a e b e troque o valor delas. Ou seja, o valor de a deve ser igual ao
+valor de b e o valor de b deve ser igual ao valor de a. O programa
+deve imprimir os valores atualizados das variáveis na tela.*/
+
+#include &lt;stdio.h&gt;
+
+int main() {
+
+int a;
+int b;
+int auxiliary;
+
+printf("Digite o valor de a: ");
+scanf("%d", &a);
+
+printf("Digite o valor de b: ");
+scanf("%d", &b);
+
+auxiliary = a;
+a = b;
+b = auxiliary;
+
+printf("A: %d\n", a);
+printf("B: %d\n", b);
+
+return 0;
+}
+
+</code></pre>
+    <hr />
+
+    <br /><a>Ex7_10%.c</a><br /><br />
+
+    <pre><code class="language-c">
+
+/*Escreva um programa em C que leia o valor de um produto e calcule o
+valor final com desconto de 10%. O programa deve imprimir o valor
+final na tela.*/
+
+#include &lt;stdio.h&gt;
+
+int main(){
+
+float product;
+float valorFinal;
+
+printf("Digite o valor do produto: ");
+scanf("%f", &product);
+
+valorFinal = product - (product * 0.1);
+
+printf("Valor Final: %f\n", valorFinal);
+
+return 0;
+}
+
+</code></pre>
+    <hr />
+
+    <br /><a>Ex8_calculations.c</a><br /><br />
+
+    <pre><code class="language-c">
+
+/*Escreva um programa em C que leia dois números inteiros e imprima
+na tela a soma, subtração, multiplicação e divisão dos dois números.*/
+
+#include &lt;stdio.h&gt;
+
+int main(){
+
+int a;
+int b;
+int sum, subtraction;
+float multiplication, division;
+
+printf("Digite o valor de a: ");
+scanf("%d", &a);
+
+printf("Digite o valor de b: ");
+scanf("%d", &b);
+
+sum = a + b;
+subtraction = a - b;
+multiplication = a * b;
+division = a / b;
+
+printf ("sum: %d, subtraction: %d, multiplication: %f, division: %f\n", sum, subtraction, multiplication, division);
+
+return 0;
+}
+
+</code></pre>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-c.min.js"></script>
+
+    <script src="/Portifolio/navbar.js"></script>
+    <script src="/Portifolio/ScrollFadeControl.js"></script>
+  </body>
+</html>

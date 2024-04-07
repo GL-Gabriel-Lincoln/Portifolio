@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Programando #13</title>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="/Portifolio/GL.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="/Portifolio/index.css" />
+
+    <meta charset="UTF-8" />
+
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <div style="text-align: center">
+      <br />
+      <div class="title-bar">
+        <h1><a class="color">Programando #13</a></h1>
+      </div>
+      <br />
+    </div>
+
+    <iframe
+      width="912"
+      height="513"
+      src="https://www.youtube.com/embed/3kh9h9JNils"
+      title="Programando #13"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+
+    <br /><br /><a>Ex32_calculator.c</a><br /><br />
+
+    <pre><code class="language-c">
+/*Faça um programa em C que simule uma calculadora simplificada. O
+programa deve exibir um menu que possibilite o usuário a escolher
+entre as operações de soma, subtração, multiplicação, divisão e sair.
+Caso a opção sair seja escolhida, o programa encerra. Caso qualquer
+outra opção seja escolhida, o programa irá pedir ao usuário dois
+operandos e realizar a respectiva operação.*/
+
+#include &lt;stdio.h&gt;
+
+
+void scanAB(int* a, int* b) {
+
+    printf("Digite o valor de a: ");
+    scanf("%d", a);
+
+    printf("Digite o valor de b: ");
+    scanf("%d", b);
+
+}
+
+
+int main() {
+
+int option = 0;
+int a;
+int b;
+int result;
+
+
+    while (option != 5) {
+
+        printf("Digite a opção que deseja fazer a operação:\n Opção 1 '+'\n Opção 2 '-'\n Opção 3 '*'\n Opção 4 '/'\n Opção 5 'Sair'\n");
+        scanf("%d", &option);
+
+        if (option == 1) {
+
+            scanAB(&a, &b);
+
+            result = a + b;
+
+            printf("%d + %d = %d\n", a, b, result);
+
+
+        } else if (option == 2) {
+
+            scanAB(&a, &b);
+            
+            result = a - b;
+
+            printf("%d - %d = %d\n", a, b, result);
+            
+
+
+
+        } else if (option == 3) {
+
+            scanAB(&a, &b);
+
+            result = a * b;
+
+            printf("%d * %d = %d\n", a, b, result);
+            
+        } else if (option == 4) {
+
+            scanAB(&a, &b);
+
+            result = a / b;
+
+            printf("%d / %d = %d\n", a, b, result);
+            
+        }
+    }
+
+return 0;
+}
+</code></pre>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-c.min.js"></script>
+
+    <script src="/Portifolio/navbar.js"></script>
+    <script src="/Portifolio/ScrollFadeControl.js"></script>
+  </body>
+</html>

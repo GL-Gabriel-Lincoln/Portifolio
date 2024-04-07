@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Programando #01</title>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="/Portifolio/GL.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="/Portifolio/index.css" />
+
+    <meta charset="UTF-8" />
+
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <div style="text-align: center">
+      <br />
+      <div class="title-bar">
+        <h1><a class="color">Programando #01</a></h1>
+      </div>
+      <br />
+    </div>
+
+    <iframe
+      width="912"
+      height="513"
+      src="https://www.youtube.com/embed/uyrwjylZ1-M"
+      title="Programando #01"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+
+    <br /><br /><a>Ex1_BMI.c</a><br /><br />
+
+    <pre><code class="language-c">
+/*Desenvolva o código em C para calcular o IMC (índice de massa corpórea) de uma pessoa (peso/altura²).*/
+
+#include &lt;stdio.h&gt;
+
+int main(){
+
+float BMI;
+float weight;
+float height;
+
+weight = 115;
+height = 1.95;
+
+BMI = (weight/(height * height));
+
+printf("BMI: %f\n", BMI);
+
+return 0;
+}
+</code></pre>
+
+    <br /><a>Ex2_arithmetic.c</a><br /><br />
+
+    <pre><code class="language-c">
+/*Escreva um programa em C que calcule a média aritmética de três
+números inteiros e imprima o resultado na tela.*/
+
+#include &lt;stdio.h&gt;
+
+int main(){
+
+int average_arithmetic;
+int a;
+int b;
+int c;
+
+a = 2;
+b = 3;
+c = 4;
+
+average_arithmetic = (a + b + c) / 3;
+
+printf("average_arithmetic = %d\n", average_arithmetic);
+
+return 0;
+}
+</code></pre>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-c.min.js"></script>
+
+    <script src="/Portifolio/navbar.js"></script>
+    <script src="/Portifolio/ScrollFadeControl.js"></script>
+  </body>
+</html>

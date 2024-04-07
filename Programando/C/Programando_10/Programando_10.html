@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Programando #10</title>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="/Portifolio/GL.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="/Portifolio/index.css" />
+
+    <meta charset="UTF-8" />
+
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <div style="text-align: center">
+      <br />
+      <div class="title-bar">
+        <h1><a class="color">Programando #10</a></h1>
+      </div>
+      <br />
+    </div>
+
+    <iframe
+      width="912"
+      height="513"
+      src="https://www.youtube.com/embed/vR0lug7AwEs"
+      title="Programando #10"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+
+    <br /><br /><a>Ex29_divisor.c</a><br /><br />
+
+    <pre><code class="language-c">
+/*Desenvolva um programa em C que lê um número do teclado
+imprime na tela todos os divisores do número.*/
+
+#include &lt;stdio.h&gt;
+
+int main() {
+
+int n;
+
+printf("Digite o valor de n: ");
+scanf("%d", &n);
+
+for(int i = 1; i <= n; i++) {
+
+    if (n % i == 0) {
+
+        printf("%d é divisor %d\n", i, n);
+
+    }
+}
+
+return 0;
+
+}
+</code></pre>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-c.min.js"></script>
+
+    <script src="/Portifolio/navbar.js"></script>
+    <script src="/Portifolio/ScrollFadeControl.js"></script>
+  </body>
+</html>

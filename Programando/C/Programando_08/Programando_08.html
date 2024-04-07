@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Programando #08</title>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="/Portifolio/GL.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="/Portifolio/index.css" />
+
+    <meta charset="UTF-8" />
+
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <div style="text-align: center">
+      <br />
+      <div class="title-bar">
+        <h1><a class="color">Programando #08</a></h1>
+      </div>
+      <br />
+    </div>
+
+    <iframe
+      width="912"
+      height="513"
+      src="https://www.youtube.com/embed/kOPwtf9ZYng"
+      title="Programando #08"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+
+    <br /><br /><a>Ex19_triangle.c</a><br /><br />
+
+    <pre><code class="language-c">
+/*Faça um programa que leia três coordenadas (x, y) e informa se elas
+formam um triângulo. Dica: é necessário calcular a distância entre
+elas.*/
+
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main() {
+
+int x1, y1;
+int x2, y2;
+int x3, y3;
+int d12;
+int d23;
+int d13;
+
+printf("Digite o valor de x1, y1: ");
+scanf("%d %d", &x1, &y1);
+
+printf("Digite o valor de x2, y2: ");
+scanf("%d %d", &x2, &y2);
+
+printf("Digite o valor de x3, y3: ");
+scanf("%d %d", &x3, &y3);
+
+d12 = sqrt(((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1)));
+d23 = sqrt(((x3 - x2) * (x3 - x2)) + ((y3 - y2) * (y3 - y2)));
+d13 = sqrt(((x3 - x1) * (x3 - x1)) + ((y3 - y1) * (y3 - y1)));
+
+if ((d12 + d23 > d13) && (d12 + d13 > d23) && (d23 + d13 > d12)) {
+
+    printf("As cordenadas formam um triângulo\n");
+
+} else {
+
+    printf("As cordenadas não formam um triângulo\n");
+}
+
+return 0;
+}
+</code></pre>
+
+    <br /><br /><a>Ex20_sum.c</a><br /><br />
+
+    <pre><code class="language-c">
+/*Desenvolva o código em C de um programa que soma números
+inteiros informados pelo usuário até que um número negativo seja
+informado e então imprime o resultado da soma na tela.*/
+
+#include &lt;stdio.h&gt;
+
+int main() {
+
+int x = 0;
+int y = 0;
+
+while(x >= 0){
+
+    printf("Digite o valor de x: ");
+    scanf("%d", &x);
+
+    if (x < 0){
+        break;
+    }
+
+
+    y += x;
+    
+}
+
+printf("%d é o resultdao da soma\n", y);
+
+return 0;
+}
+</code></pre>
+
+    <br /><br /><a>Ex21_menu.c</a><br /><br />
+
+    <pre><code class="language-c">
+/*Desenvolva o código em C de um programa que imprime na tela um
+menu onde o usuário poderá escolher entre: (1) Opção 1, (2) Opção
+2, (3) Opção 3, (4) sair. Caso a opção (4) seja escolhida o programa
+deve encerrar. Caso qualquer outra opção seja escolhida o programa
+deve imprimir na tela o menu novamente.*/
+
+#include &lt;stdio.h&gt;
+
+int main() {
+
+int x = 0;
+
+while (x != 4) {
+
+    printf("Ditige a opção que quer:\n (1) Opção 1\n (2) Opção 2\n (3) Opção 3\n (4) sair\n");
+    scanf("%d", &x);
+
+}
+
+return 0;
+}
+</code></pre>
+
+    <br /><br /><a>Ex22_summation.c</a><br /><br />
+
+    <pre><code class="language-c">
+/*Desenvolva o código em C de um programa que solicita um número
+inteiro n do usuário e então imprime na tela o resultado da somatória
+de todos os números de 0, 1, 2, ..., n, como a fórmula a seguir:
+n
+Somatorio i
+i=0*/
+
+#include &lt;stdio.h&gt;
+
+int main() {
+
+int n = 0;
+int result = 0;
+
+printf("Digite o valor de n: ");
+scanf("%d", &n);
+
+while (n >= 0){
+
+    result += n;
+    
+    n--;
+
+}
+
+printf("Resultado: %d\n", result);
+
+return 0;
+}
+</code></pre>
+
+    <br /><br /><a>Ex23_pair.c</a><br /><br />
+
+    <pre><code class="language-c">
+/*Desenvolva o código em C de um programa que solicita um número
+inteiro 𝑛 do usuário e então imprime na tela a somatória de todos os
+números pares inteiros no intervalo fechado [1, 𝑛].*/
+
+#include &lt;stdio.h&gt;
+
+int main() {
+
+int n = 0;
+int i = 1;
+int result = 0;
+
+printf("Digite o valor de n: ");
+scanf("%d", &n);
+
+while (i <= n){
+
+    if (i % 2 == 0) {
+        result += i;
+    }
+    i++;
+}
+
+printf("%d é o resultado\n", result);
+
+return 0;
+}
+</code></pre>
+
+    <br /><br /><a>Ex24_grade.c</a><br /><br />
+
+    <pre><code class="language-c">
+/*Desenvolva o código em C de um programa em que o usuário informa
+a nota de 𝑛 alunos e o programa conta quantos alunos foram
+aprovados (nota ≥ 6) e quantos alunos foram reprovados (nota < 6).*/
+
+#include &lt;stdio.h&gt;
+
+int main() {
+
+int nAlunos;
+int quantidadeDeAlunosAprovados = 0;
+int quantidadeDeAlunosReprovados = 0;
+int nota;
+int i = 0;
+
+printf("Digite a quantidade de alunos: ");
+scanf("%d", &nAlunos);
+
+while(i < nAlunos) {
+
+    printf("Digite a nota do aluno %d: ", i+1);
+    scanf("%d", &nota);
+
+    if (nota >= 6) {
+
+        quantidadeDeAlunosAprovados++;
+
+    } else if (nota < 6) {
+
+        quantidadeDeAlunosReprovados++;
+
+    }
+
+    i++;
+}
+
+printf("Quantidade de alunos aprovados: %d\n", quantidadeDeAlunosAprovados);
+printf("Quantidade de alunos reprovados: %d\n", quantidadeDeAlunosReprovados);
+
+return 0;
+}
+</code></pre>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-c.min.js"></script>
+
+    <script src="/Portifolio/navbar.js"></script>
+    <script src="/Portifolio/ScrollFadeControl.js"></script>
+  </body>
+</html>
