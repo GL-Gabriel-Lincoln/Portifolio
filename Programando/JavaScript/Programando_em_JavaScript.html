@@ -28,9 +28,52 @@
       <br />
     </div>
 
-    <a href="./Programando_14/Programando_14.html" class="link"
-      >Programando #14</a
-    >
+    <a href="#programando14" class="link">Programando #14</a>
+
+    <div id="programando14" style="text-align: center">
+      <br />
+      <div class="title-bar">
+        <h1><a class="color">Programando #14</a></h1>
+      </div>
+      <br />
+    </div>
+
+    <iframe
+      width="912"
+      height="513"
+      src="https://www.youtube.com/embed/hPAAm0SIh8o"
+      title="Programando #14"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+
+    <br /><br /><a>Ex33_InteractiveIntegerSum.js</a><br /><br />
+
+    <pre><code class="language-c">
+// Desenvolva o código em JavaScript de um programa que soma números inteiros informados 
+// pelo usuário até que um número negativo seja informado e então imprime o resultado da 
+// soma na tela.
+
+let x = 0
+let y = 0
+
+while (x >= 0) {
+    x = parseInt(prompt("Digite o valor de x: "))
+
+    if(x < 0){
+        break
+    }
+
+    y += x
+}
+
+console.log("O resultado da soma é " + y)
+</code></pre>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-c.min.js"></script>
 
     <script src="/Portifolio/navbar.js"></script>
     <script src="/Portifolio/ScrollFadeControl.js"></script>
