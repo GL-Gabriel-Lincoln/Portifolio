@@ -84,8 +84,8 @@ function togglePasswordVisibility() {
 
 document.getElementById("myForm").addEventListener("submit", function (e) {
   e.preventDefault();
-  document.getElementById('spinner').style.display = 'block';
-  document.getElementById('entrar').style.display = 'none';
+  document.getElementById("spinner").style.display = "block";
+  document.getElementById("entrar").style.display = "none";
   var texto1 = document.getElementById("texto1").value;
   var texto2 = document.getElementById("texto2").value;
   fetch(
