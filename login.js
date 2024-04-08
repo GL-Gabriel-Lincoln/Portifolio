@@ -84,9 +84,13 @@ function togglePasswordVisibility() {
 
 document.getElementById("myForm").addEventListener("submit", function (e) {
   e.preventDefault();
-  document.getElementById('myLoader').style.display = 'block';
   var texto1 = document.getElementById("texto1").value;
   var texto2 = document.getElementById("texto2").value;
+  
+  // Mostra o spinner de carregamento e oculta o texto do botão
+  document.getElementById('buttonText').style.display = 'none';
+  document.getElementById('loadingSpinner').style.display = 'block';
+
   fetch(
     "https://ka4gmdhxnh.execute-api.us-east-2.amazonaws.com/Teste/escrever",
     {
@@ -100,7 +104,6 @@ document.getElementById("myForm").addEventListener("submit", function (e) {
   )
     .then((response) => response.json())
     .then((data) => {
-      document.getElementById('myLoader').style.display = 'none';
       if (data.message) {
         document.getElementById("mensagem").style.display = "inline-block";
         document.getElementById("mensagem").textContent = data.message;
