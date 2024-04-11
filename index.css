@@ -8,7 +8,15 @@ body {
 }
 * {
   caret-color: transparent;
+  inset: 0;
+  margin: 0;
 }
+
+/*header {
+  width: 100%;
+  height: 10%;
+  background-color: #06f;
+}*/
 /* Estilos de texto */
 h1,
 h2 {

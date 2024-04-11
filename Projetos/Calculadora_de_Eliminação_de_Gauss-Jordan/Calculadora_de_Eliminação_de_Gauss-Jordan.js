@@ -1,3 +1,40 @@
+function decimalParaFracao(decimal) {
+  // Aumentar a precisão do número decimal
+  decimal = parseFloat(decimal.toFixed(15));
+
+  // Se o número é um inteiro, retorne-o como está
+  if (decimal % 1 === 0) {
+    return decimal.toString();
+  }
+
+  let partes = decimal.toString().split(".");
+  let numerador = parseInt(partes.join(""));
+  let denominador = Math.pow(10, partes[1].length);
+  
+  // Função para calcular o máximo divisor comum
+  function mdc(a, b) {
+    if (b == 0) {
+      return a;
+    } else {
+      return mdc(b, a % b);
+    }
+  }
+
+  let divisor = mdc(numerador, denominador);
+
+  // Simplificar a fração
+  numerador /= divisor;
+  denominador /= divisor;
+
+  // Se o denominador é muito grande, retorne o número decimal original
+  if (denominador > 1e6) {
+    return decimal.toString();
+  }
+
+  return numerador + "/" + denominador;
+}
+
+
 function gaussJordan() {
   let matrix = [
     [
@@ -49,7 +86,12 @@ function gaussJordan() {
     matrixDiv.innerHTML += "Passo " + (s + 1) + ":<br>";
     for (let i = 0; i < steps[s].length; i++) {
       for (let j = 0; j < steps[s][i].length; j++) {
-        matrixDiv.innerHTML += steps[s][i][j].toFixed(2) + " ";
+        let valor = steps[s][i][j];
+        // Se o valor é um número decimal, converta-o para uma fração
+        if (valor % 1 !== 0) {
+          valor = decimalParaFracao(valor);
+        }
+        matrixDiv.innerHTML += valor + " ";
       }
       matrixDiv.innerHTML += "<br>";
     }
