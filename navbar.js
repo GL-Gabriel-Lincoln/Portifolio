@@ -29,11 +29,6 @@ class MeuComponente extends React.Component {
           "a",
           { href: "/Portifolio/Programando/Programando.html" },
           "Programando"
-        ),
-        e(
-          "a",
-          { href: "/Portifolio/historico_202200145.pdf" },
-          "Historico Academico"
         )
       ),
       e("div", { className: "fade-out" })
