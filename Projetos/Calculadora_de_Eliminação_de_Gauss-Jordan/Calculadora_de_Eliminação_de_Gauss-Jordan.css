@@ -20,3 +20,9 @@ td {
   padding: 5px;
   caret-color: auto;
 }
+
+  #matrix > div > div {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+  }

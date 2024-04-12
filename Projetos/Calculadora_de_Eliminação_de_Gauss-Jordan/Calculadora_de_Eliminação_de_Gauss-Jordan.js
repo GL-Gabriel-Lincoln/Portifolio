@@ -1,37 +1,12 @@
 function decimalParaFracao(decimal) {
-  // Aumentar a precisão do número decimal
-  decimal = parseFloat(decimal.toFixed(15));
-
-  // Se o número é um inteiro, retorne-o como está
-  if (decimal % 1 === 0) {
-    return decimal.toString();
-  }
-
-  let partes = decimal.toString().split(".");
-  let numerador = parseInt(partes.join(""));
-  let denominador = Math.pow(10, partes[1].length);
+  // Determinar o sinal do número decimal
+  let sinal = decimal < 0 ? "-" : "";
   
-  // Função para calcular o máximo divisor comum
-  function mdc(a, b) {
-    if (b == 0) {
-      return a;
-    } else {
-      return mdc(b, a % b);
-    }
-  }
-
-  let divisor = mdc(numerador, denominador);
-
-  // Simplificar a fração
-  numerador /= divisor;
-  denominador /= divisor;
-
-  // Se o denominador é muito grande, retorne o número decimal original
-  if (denominador > 1e6) {
-    return decimal.toString();
-  }
-
-  return numerador + "/" + denominador;
+  // Usar a função fraction da biblioteca math.js
+  let fracao = math.fraction(Math.abs(decimal));
+  
+  // Retornar a fração como uma string, incluindo o sinal
+  return sinal + fracao.n + '/' + fracao.d;
 }
 
 
@@ -79,24 +54,30 @@ function gaussJordan() {
   }
 
   // Exibindo a matriz na tela
-  document.getElementById("matrix").style.display = "inline-block";
-  let matrixDiv = document.getElementById("matrix");
-  matrixDiv.innerHTML = "";
-  for (let s = 0; s < steps.length; s++) {
-    matrixDiv.innerHTML += "Passo " + (s + 1) + ":<br>";
-    for (let i = 0; i < steps[s].length; i++) {
-      for (let j = 0; j < steps[s][i].length; j++) {
-        let valor = steps[s][i][j];
-        // Se o valor é um número decimal, converta-o para uma fração
-        if (valor % 1 !== 0) {
-          valor = decimalParaFracao(valor);
-        }
-        matrixDiv.innerHTML += valor + " ";
+document.getElementById("matrix").style.display = "inline-block";
+let matrixDiv = document.getElementById("matrix");
+matrixDiv.innerHTML = "";
+for (let s = 0; s < steps.length; s++) {
+  let grid = document.createElement('div');
+  grid.style.display = 'grid';
+  grid.style.gridTemplateColumns = 'repeat(' + steps[s][0].length + ', 1fr)';
+  grid.style.gap = '10px';
+  grid.style.marginBottom = '20px';
+  matrixDiv.innerHTML += "Passo " + (s + 1) + ":<br>";
+  for (let i = 0; i < steps[s].length; i++) {
+    for (let j = 0; j < steps[s][i].length; j++) {
+      let valor = steps[s][i][j];
+      // Se o valor é um número decimal, converta-o para uma fração
+      if (valor % 1 !== 0) {
+        valor = decimalParaFracao(valor);
       }
-      matrixDiv.innerHTML += "<br>";
+      let cell = document.createElement('div');
+      cell.innerText = valor;
+      grid.appendChild(cell);
     }
-    matrixDiv.innerHTML += "<br>";
   }
+  matrixDiv.appendChild(grid);
+}
 
   document.getElementById("l1c1").value = "";
   document.getElementById("l1c2").value = "";
