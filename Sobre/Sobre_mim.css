@@ -5,6 +5,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  inset: 0;
+  margin: 0;
 }
 
 h1 {

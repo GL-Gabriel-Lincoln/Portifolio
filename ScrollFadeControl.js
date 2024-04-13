@@ -11,6 +11,14 @@ function checkScroll() {
   }
 }
 
+function goBack() {
+  window.history.back();
+}
+
+function mostrarDiv(id) {
+  document.getElementById(id).style.display = 'block';
+}
+
 checkScroll(); // Chama a função imediatamente
 navbar.addEventListener("scroll", checkScroll);
 window.addEventListener("load", checkScroll);
