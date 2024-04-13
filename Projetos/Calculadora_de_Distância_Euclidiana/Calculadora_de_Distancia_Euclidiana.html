@@ -31,7 +31,7 @@
       </h1>
     </div>
     <br />
-    <div style="display: flex">
+    <div style="display: flex; align-items: center;">
       <div style="margin-right: 20px">
         <p class="common">
           Ponto 1:<br /><br />
@@ -44,7 +44,7 @@
         </p>
       </div>
 
-      <div>
+      <div style="margin-right: 20px">
         <p class="common">
           Ponto 2:<br /><br />
           <label for="x2" class="common"
@@ -55,6 +55,10 @@
           /></label>
         </p>
       </div>
+      <br />
+      <div style="width: 500px; height: 250px; margin-right: 25px ">
+        <canvas id="myChart" style="display: none"></canvas>
+      </div>
     </div>
     <button id="calculateButton" onclick="calculateDistance()">
       Calcular Distância
@@ -62,9 +66,8 @@
     <br />
     <br />
     <div class="common" id="resultado" style="display: none"></div>
-    <br /><br />
-    <canvas id="myChart" style="display: none"></canvas>
-    <br /><br />
+    <br />
+    <br />
     <div class="text-primary">
       <p>
         Este é um programa de uma Calculadora de Distância Euclidiana. A

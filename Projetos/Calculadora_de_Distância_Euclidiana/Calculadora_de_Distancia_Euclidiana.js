@@ -57,8 +57,16 @@ function calculateDistance() {
     },
     options: {
       scales: {
+        x: {
+          ticks: {
+            color: "white",
+          },
+        },
         y: {
           beginAtZero: true,
+          ticks: {
+            color: "white",
+          },
         },
       },
     },
