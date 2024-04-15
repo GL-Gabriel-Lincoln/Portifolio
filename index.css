@@ -24,8 +24,8 @@ h2 {
 }
 .text-primary {
   background-color: #ffffffbc;
-  border: 3px solid rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  border: 3px solid #ffffff;
+  color: #000000;
   font-family: Arial, sans-serif;
   font-size: 45px;
   padding: 10px;
@@ -47,7 +47,7 @@ a,
   transition: all 0.5s;
 }
 .link {
-  animation: rgb 2s linear infinite;
+  animation: shake 2s ease-in-out infinite;
   border-radius: 20px;
   display: inline-block;
   margin: 10px;
@@ -93,8 +93,8 @@ a,
 
   background: linear-gradient(
     to left,
-    rgb(255, 255, 255),
-    rgba(255, 255, 255, 0)
+    #ffffff,
+    #ffffff00
   );
 }
 
@@ -162,9 +162,9 @@ h2 a:hover {
 }
 /* Estilos de botão */
 #calculateButton {
-  animation: rgb 2s linear infinite;
+  animation: shake 2s ease-in-out infinite;
   background-color: #5599ff;
-  border: 3px solid rgb(255, 255, 255);
+  border: 3px solid #ffffff;
   border-radius: 40px;
   color: white;
   cursor: pointer;
@@ -203,39 +203,23 @@ h2 a:hover {
   width: 33%;
 }
 
-@keyframes rgb {
-  0% {
-    outline-color: red;
-  }
-  14% {
-    outline-color: orange;
-  }
-  28% {
-    outline-color: yellow;
-  }
-  42% {
-    outline-color: lime;
-  }
-  57% {
-    outline-color: blue;
-  }
-  71% {
-    outline-color: indigo;
-  }
-  85% {
-    outline-color: violet;
-  }
-  100% {
-    outline-color: red;
-  }
+@keyframes shake {
+  10% { transform: translate(1px, 1px) rotate(0deg); }
+  20% { transform: translate(-1px, -2px) rotate(-1deg); }
+  30% { transform: translate(-3px, 0px) rotate(1deg); }
+  40% { transform: translate(3px, 2px) rotate(0deg); }
+  50% { transform: translate(1px, -1px) rotate(1deg); }
+  60% { transform: translate(-1px, 2px) rotate(-1deg); }
+  70% { transform: translate(-3px, 1px) rotate(0deg); }
+  80% { transform: translate(3px, 1px) rotate(-1deg); }
+  90% { transform: translate(-1px, -1px) rotate(1deg); }
 }
 
+
 .container a {
-  animation: rgb 2s linear infinite;
-  background-color: rgb(255, 255, 255);
-  border: 2px solid #000000;
+  animation: shake 2s ease-in-out infinite;
+  background-color: #ffffff;
   color: #000000;
-  outline: 4px solid;
   transition: all 0.5s;
 }
 
