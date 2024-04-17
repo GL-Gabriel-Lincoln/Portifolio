@@ -5,8 +5,26 @@ const e = React.createElement;
 class MeuComponente extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { navVisible: false, menuClicked: false };
+    this.state = {
+      navVisible: false,
+      menuClicked: false,
+    };
+    this.checkScroll = this.checkScroll.bind(this);
     this.toggleNav = this.toggleNav.bind(this);
+  }
+
+  checkScroll() {
+
+    var navbar = document.querySelector(".navbar");
+    var fadeOut = document.querySelector(".fade-out");
+
+    if (!navbar || !fadeOut) return;
+    var maxScrollLeft = navbar.scrollWidth - navbar.clientWidth;
+    if (navbar.scrollLeft >= maxScrollLeft - 10) {
+      fadeOut.style.opacity = "0";
+    } else {
+      fadeOut.style.opacity = "1";
+    }
   }
 
   toggleNav() {
@@ -59,9 +77,10 @@ class MeuComponente extends React.Component {
             { href: "/Portifolio/Programando/Programando.html" },
             "Programando"
           )
-        ),
+        )
       ),
-      this.state.navVisible && e("div", { className: "fade-out" })
+      this.state.navVisible && e("div", { className: `fade-out` }),
+      this.checkScroll()
     );
   }
 }

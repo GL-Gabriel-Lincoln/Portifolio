@@ -99,10 +99,11 @@ a,
   color: #ffffff;
   margin: 10px;
   width: 120px;
-  background-color:#5599ff;
+  background-color: #5599ff;
   border: 3px solid;
   border-radius: 20px;
   transition: opacity 0.126s ease-out;
+  text-align: center;
 }
 
 .navbar.nav-visible {
@@ -123,7 +124,7 @@ a,
 .fade-out {
   content: "";
   height: 100%;
-  opacity: 1;
+  opacity: 0;
   position: absolute;
   right: 0;
   top: 0;
