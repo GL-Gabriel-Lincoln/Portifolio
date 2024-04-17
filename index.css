@@ -69,6 +69,8 @@ a,
 .navbar-container {
   position: relative;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
@@ -80,6 +82,42 @@ a,
   scrollbar-width: thin;
   top: 0;
   width: 100%;
+  transform: translateX(-500%);
+  transition: transform 0.45s ease-out;
+  flex-direction: column;
+  visibility: hidden;
+  flex-direction: row;
+}
+
+.logo-button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-button {
+  font-size: 60px;
+  color: #ffffff;
+  margin: 10px;
+  width: 120px;
+  background-color:#5599ff;
+  border: 3px solid;
+  border-radius: 20px;
+  transition: opacity 0.126s ease-out;
+}
+
+.navbar.nav-visible {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.logo-image-clicked,
+.menu-button-clicked {
+  opacity: 0;
+}
+
+.logo-image {
+  align-self: center;
+  transition: opacity 0.126s ease-out;
 }
 
 .fade-out {
@@ -90,12 +128,7 @@ a,
   right: 0;
   top: 0;
   width: 100px;
-
-  background: linear-gradient(
-    to left,
-    #ffffff,
-    #ffffff00
-  );
+  background: linear-gradient(to left, #ffffff, #ffffff00);
 }
 
 .navbar a {
@@ -204,17 +237,34 @@ h2 a:hover {
 }
 
 @keyframes shake {
-  10% { transform: translate(1px, 1px) rotate(0deg); }
-  20% { transform: translate(-1px, -2px) rotate(-1deg); }
-  30% { transform: translate(-3px, 0px) rotate(1deg); }
-  40% { transform: translate(3px, 2px) rotate(0deg); }
-  50% { transform: translate(1px, -1px) rotate(1deg); }
-  60% { transform: translate(-1px, 2px) rotate(-1deg); }
-  70% { transform: translate(-3px, 1px) rotate(0deg); }
-  80% { transform: translate(3px, 1px) rotate(-1deg); }
-  90% { transform: translate(-1px, -1px) rotate(1deg); }
+  10% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  20% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  30% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  40% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  50% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  60% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  70% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  80% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  90% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
 }
-
 
 .container a {
   animation: shake 2s ease-in-out infinite;
@@ -246,10 +296,6 @@ h2 a:hover {
 hr {
   border: none;
   border-top: 10px solid #ffffff;
-}
-
-.logo-image {
-  align-self: center;
 }
 
 #myChart {

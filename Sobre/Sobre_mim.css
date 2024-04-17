@@ -9,116 +9,13 @@ body {
   margin: 0;
 }
 
-h1 {
-  border: 3px solid black; /* Adiciona uma borda preta de 2px ao texto */
-
-  text-align: center;
-  color: white;
-  border: 2px solid black; /* Adiciona uma borda preta de 2px */
-  background-color: #0066ffc6; /* Define a cor de fundo para cinza claro */
-  padding: 10px; /* Adiciona um pouco de espaço ao redor do texto */
-  font-size: 35px; /* Aumenta o tamanho da fonte */
-  font-family: Arial, sans-serif; /* Muda a fonte para Arial */
-
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
-h2 {
-  border: 3px solid black; /* Adiciona uma borda preta de 2px ao texto */
-
-  text-align: left;
-  color: white;
-  border: 2px solid black; /* Adiciona uma borda preta de 2px */
-  background-color: #0000007c; /* Define a cor de fundo para cinza claro */
-  padding: 10px; /* Adiciona um pouco de espaço ao redor do texto */
-  font-size: 35px; /* Aumenta o tamanho da fonte */
-  font-family: Arial, sans-serif; /* Muda a fonte para Arial */
-
-  text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
-}
-
-* {
-  caret-color: transparent;
-}
-
-.navbar-container {
-  position: relative;
-  width: 100%;
-}
-
-.navbar {
-  display: flex;
-  overflow-x: auto;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  scrollbar-color: #06f transparent;
-}
-
-.fade-out {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 100%;
-  background: linear-gradient(
-    to left,
-    rgb(255, 255, 255),
-    rgba(255, 255, 255, 0)
-  );
-  opacity: 1;
-}
-
-.navbar a {
-  border: 3px solid #000000;
-  float: left;
-  display: block;
-  color: #ffffff;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  margin: 10px;
-  border-radius: 20px;
-  transition: all 0.5s;
-}
-
-.navbar a:hover {
-  background-color: #ffffff;
-  color: black;
-  border-color: #5599ff;
-  transform: scale(1.2);
-
-  margin-inline: 40px;
-}
-
-a,
-.common {
-  border: 3px solid #ffffff;
-  background-color: #5599ff;
-  padding: 10px;
-  font-size: 35px;
+.text-primary {
+  background-color: #00000077 !important;
+  border: 3px solid #000000 !important;
+  color: #ffffff !important;
   font-family: Arial, sans-serif;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  color: #ffffff;
-  display: inline-block;
-}
-
-.color {
-  background-color: #0066ff;
-}
-
-.logo-image {
-  align-self: center;
-}
-
-.title-bar {
-  display: flex;
-  align-items: center; /* Centraliza o conteúdo verticalmente */
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  position: relative;
-  width: 100%;
-  height: 80px; /* Ajuste este valor para alterar a altura da barra do título */
-  background-color: #5599ff;
+  font-size: 45px;
+  padding: 10px;
+  text-align: left;
+  text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000 !important;
 }

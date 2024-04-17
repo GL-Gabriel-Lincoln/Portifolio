@@ -3,35 +3,65 @@
 const e = React.createElement;
 
 class MeuComponente extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { navVisible: false, menuClicked: false };
+    this.toggleNav = this.toggleNav.bind(this);
+  }
+
+  toggleNav() {
+    this.setState((state) => ({
+      navVisible: !state.navVisible,
+      menuClicked: true,
+    }));
+    setTimeout(() => this.setState({ menuClicked: false }), 337);
+  }
+
   render() {
     return e(
       "div",
       { className: "navbar-container" },
       e(
         "div",
-        { className: "navbar" },
+        { className: "logo-button-container" },
         e("img", {
           src: "/Portifolio/GL sem fundo.png",
           alt: "Descrição da imagem",
-          width: "50",
-          height: "50",
-          className: "logo-image",
+          width: "75",
+          height: "75",
+          className: `logo-image ${
+            this.state.menuClicked ? "logo-image-clicked" : ""
+          }`,
         }),
-        e("a", { href: "/Portifolio/index.html" }, "Redes Sociais"),
-        e("a", { href: "/Portifolio/Login.html" }, "Projetos"),
-        e("a", { href: "/Portifolio/Sobre/Sobre_mim.html" }, "Sobre"),
         e(
-          "a",
-          { href: "/Portifolio/Disciplinas_UFJ/Disciplinas_UFJ.html" },
-          "Disciplinas UFJ"
+          "button",
+          {
+            onClick: this.toggleNav,
+            className: `menu-button ${
+              this.state.menuClicked ? "menu-button-clicked" : ""
+            }`,
+          },
+          "☰"
         ),
         e(
-          "a",
-          { href: "/Portifolio/Programando/Programando.html" },
-          "Programando"
-        )
+          "div",
+          { className: `navbar ${this.state.navVisible ? "nav-visible" : ""}` },
+          e("a", { href: "/Portifolio/index.html" }, "Redes Sociais"),
+          e("a", { href: "/Portifolio/Login.html" }, "Projetos"),
+          e("a", { href: "/Portifolio/Sobre/Sobre_mim.html" }, "Sobre"),
+          e(
+            "a",
+            { href: "/Portifolio/Disciplinas_UFJ/Disciplinas_UFJ.html" },
+            "Disciplinas UFJ"
+          ),
+          e(
+            "a",
+            { href: "/Portifolio/Programando/Programando.html" },
+            "Programando"
+          )
+        ),
       ),
-      e("div", { className: "fade-out" })
+      this.state.navVisible && e("div", { className: "fade-out" })
     );
   }
 }
