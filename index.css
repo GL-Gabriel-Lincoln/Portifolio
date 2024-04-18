@@ -47,12 +47,10 @@ a,
   transition: all 0.5s;
 }
 .link {
-  animation: shake 2s ease-in-out infinite;
   border-radius: 20px;
   display: inline-block;
   margin: 10px;
   margin-bottom: 5px;
-  outline: 3px solid;
   text-decoration: none;
   transition: all 0.5s;
   white-space: nowrap;
@@ -71,6 +69,7 @@ a,
   width: 100%;
   display: flex;
   flex-direction: column;
+
 }
 
 .navbar {
@@ -95,15 +94,20 @@ a,
 }
 
 .menu-button {
-  font-size: 60px;
-  color: #ffffff;
-  margin: 10px;
-  width: 120px;
   background-color: #5599ff;
-  border: 3px solid;
+  border: 3px solid #ffffff;
   border-radius: 20px;
-  transition: opacity 0.126s ease-out;
+  color: #ffffff;
+  display: block;
+  float: left;
+  font-family: Arial, sans-serif;
+  margin: 10px;
+  font-size: 35px;
+  padding: 14px 16px;
   text-align: center;
+  text-decoration: none;
+  transition: opacity 0.126s ease-out;
+  transition: all 0.5s;
 }
 
 .navbar.nav-visible {
@@ -146,7 +150,7 @@ a,
 }
 
 .navbar a:hover,
-.link1 a:hover {
+.link1 a:hover{
   background-color: #ffffff;
   border-color: #5599ff;
   color: black;
@@ -175,8 +179,8 @@ h2 a:hover {
 
 .link:hover {
   background-color: #ffffff;
-  border-color: #5599ff;
-  color: black;
+  border-color:#0066ff;
+  color:#000000;
   margin-inline: 55px;
   text-shadow: -1px 0 #5599ff, 0 1px #5599ff, 1px 0 #5599ff, 0 -1px #5599ff;
   transform: scale(1.12);
@@ -196,7 +200,6 @@ h2 a:hover {
 }
 /* Estilos de botão */
 #calculateButton {
-  animation: shake 2s ease-in-out infinite;
   background-color: #5599ff;
   border: 3px solid #ffffff;
   border-radius: 40px;

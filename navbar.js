@@ -2,6 +2,10 @@
 
 const e = React.createElement;
 
+function goBack() {
+  window.history.back();
+}
+
 class MeuComponente extends React.Component {
   constructor(props) {
     super(props);
