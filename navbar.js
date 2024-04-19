@@ -68,18 +68,12 @@ class MeuComponente extends React.Component {
         e(
           "div",
           { className: `navbar ${this.state.navVisible ? "nav-visible" : ""}` },
-          e("a", { href: "/Portifolio/index.html" }, "Redes Sociais"),
+          e("a", { href: "/Portifolio/index.html" }, "Home"),
           e("a", { href: "/Portifolio/Login.html" }, "Projetos"),
-          e("a", { href: "/Portifolio/Sobre/Sobre_mim.html" }, "Sobre"),
           e(
             "a",
             { href: "/Portifolio/Disciplinas_UFJ/Disciplinas_UFJ.html" },
             "Disciplinas UFJ"
-          ),
-          e(
-            "a",
-            { href: "/Portifolio/Programando/Programando.html" },
-            "Programando"
           )
         )
       ),
