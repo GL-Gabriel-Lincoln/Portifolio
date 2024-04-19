@@ -188,16 +188,16 @@ h2 a:hover {
 .container a:hover {
   background-color: #000000;
   color: #ffffff;
-  margin-left: 50px;
-  transform: scale(1.25);
 }
 /* Estilos de container */
 .container {
-  align-items: center;
+  align-items: bottom;
   display: flex;
-  justify-content: start;
-  text-align: start;
+  justify-content: center;
+
 }
+
+
 /* Estilos de botão */
 #calculateButton {
   background-color: #5599ff;
@@ -275,6 +275,7 @@ h2 a:hover {
   background-color: #ffffff;
   color: #000000;
   transition: all 0.5s;
+  margin-left: 20px;
 }
 
 #changeBackground {
@@ -291,11 +292,6 @@ h2 a:hover {
   width: 200px;
 
   /* Ajuste o valor conforme necessário */
-}
-.container i {
-  animation: shake 2s ease-in-out infinite;
-  margin-left: 3px;
-  color: #ffffff;
 }
 hr {
   border: none;
