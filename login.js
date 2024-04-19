@@ -109,7 +109,7 @@ document.getElementById("myForm").addEventListener("submit", function (e) {
         data.message === "Usuário autenticado com sucesso!" ||
         data.message === "Usúario criado com sucesso!"
       ) {
-        window.location.href = "/Portifolio/Projetos/Programando/Programando.html";
+        window.location.href = "../Portifolio/Projetos/Programando/Programando.html";
       }
     })
     .catch((error) => {
