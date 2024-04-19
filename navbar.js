@@ -72,7 +72,7 @@ class MeuComponente extends React.Component {
           e("a", { href: "/Login-Cadastro/index.html" }, "Projetos"),
           e(
             "a",
-            { href: "/Portifolio/Disciplinas_UFJ/Disciplinas_UFJ.html" },
+            { href: "/Disciplinas_UFJ/index.html" },
             "Disciplinas UFJ"
           )
         )
