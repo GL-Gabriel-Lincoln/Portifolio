@@ -50,7 +50,6 @@ a,
   border-radius: 20px;
   display: inline-block;
   margin: 10px;
-  margin-bottom: 5px;
   text-decoration: none;
   transition: all 0.5s;
   white-space: nowrap;
@@ -400,4 +399,17 @@ hr {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.centered {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chart-container {
+  width: 600px;
+  height: 300px;
+  margin-left: 10px;
 }
