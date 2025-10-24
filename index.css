@@ -1,240 +1,74 @@
-:root {
-  /* Cores principais */
-  --primary-blue: #5599ff;
-  --dark-blue: #0066ff;
-  --background-dark: #000000;
-  --text-light: #ffffff;
-  --text-dark: #000000;
-
-  /* Bordas e Sombras */
-  --border-width: 3px;
-  --border-style: solid;
-  --text-shadow-light: -1px 0 var(--text-light), 0 1px var(--text-light),
-    1px 0 var(--text-light), 0 -1px var(--text-light);
-  --text-shadow-dark: -1px 0 var(--text-dark), 0 1px var(--text-dark),
-    1px 0 var(--text-dark), 0 -1px var(--text-dark);
-  --text-shadow-primary: -1px 0 var(--primary-blue), 0 1px var(--primary-blue),
-    1px 0 var(--primary-blue), 0 -1px var(--primary-blue);
-  --border-radius-default: 20px;
-}
-
-/* --- ESTILOS GLOBAIS/RESET --- */
-* {
-  box-sizing: border-box; /* Garante que padding e borda não aumentem o tamanho final */
-  caret-color: transparent;
-}
-
+/* Estilos básicos */
 body {
-  background-color: var(--background-dark);
   background-attachment: fixed;
+  background-color: #000000;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 0; /* Remove margem padrão do body */
-  font-family: Arial, sans-serif; /* Define fonte padrão no body */
-}
-
-a {
-  text-decoration: none;
-}
-
-/* --- LAYOUTS/CONTAINERS GERAIS --- */
-.main-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px; /* Espaçamento entre as seções (perfil e links sociais) */
-  padding: 20px 0;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%; /* Garante que o container ocupe a largura total */
-}
-
-/* --- BARRA DE TÍTULO/HEADER --- */
-.title-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 80px;
-  background-color: var(--primary-blue);
-  border-top: 10px var(--border-style) var(--text-light);
-  border-bottom: 10px var(--border-style) var(--text-light);
-  margin-bottom: 30px; /* Adiciona espaçamento após a barra de título */
-}
-
-.title-bar h1 {
+  inset: 0;
   margin: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+}
+* {
+  caret-color: transparent;
+}
+
+/*header {
   width: 100%;
-  text-align: center; /* Centraliza o H1 */
-}
-
-.title-bar a {
-  /* Estilo do link 'Home' na title-bar, que tinha a classe 'color' */
-  background-color: transparent; /* A cor de fundo vem do .title-bar */
-  border: none;
-  border-radius: 0;
-  color: var(--text-light);
-  display: block;
-  padding: 0;
-  text-shadow: var(--text-shadow-dark);
-  font-size: 45px; /* Tamanho ajustado */
-  transition: none; /* Remove transição desnecessária aqui */
-}
-
-.active-page {
-  /* Estilo específico para o link da página atual, se necessário */
-  background-color: var(--dark-blue) !important;
-  padding: 5px 15px;
-  border-radius: var(--border-radius-default);
-}
-
-/* --- CARD DE PERFIL (Estilos extraídos do inline) --- */
-.profile-card-container {
-  margin-bottom: 30px; /* Espaçamento abaixo do card */
-}
-
-.profile-card {
-  position: relative;
-  height: 750px;
-  width: min(600px, 90%); /* Usa min() para ser responsivo, até 600px */
-  background-image: url(./FML.jpg);
-  background-size: cover;
-  background-position: center;
-  border: var(--border-width) var(--border-style) var(--text-light);
-  border-radius: var(--border-radius-default);
-  color: var(--text-light);
-  font-size: 26px;
-  text-shadow: var(--text-shadow-dark);
-  text-align: justify;
-  overflow: hidden; /* Garante que o overlay e a imagem respeitem o border-radius */
-}
-
-.profile-card-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
-  border-radius: var(--border-radius-default);
-  padding: 10px; /* Adiciona padding para o conteúdo interno */
-}
-
-.profile-image-wrapper {
+  height: 10%;
+  background-color: #06f;
+}*/
+/* Estilos de texto */
+h1,
+h2 {
   text-align: center;
-  margin: 10px 0;
 }
-
-.profile-image {
-  border: var(--border-width) var(--border-style) var(--text-light);
-  border-radius: 50%; /* 100% para círculo perfeito */
-  width: 200px; /* Largura definida */
-  height: 200px;
-  object-fit: cover; /* Garante que a imagem preencha o círculo */
+.text-primary {
+  background-color: #ffffffbc;
+  border: 3px solid #ffffff;
+  color: #000000;
+  font-family: Arial, sans-serif;
+  font-size: 45px;
+  padding: 10px;
+  text-align: left;
+  text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
 }
-
-.profile-text {
-  margin: 30px;
-  line-height: 1.4; /* Melhora a legibilidade do texto */
-}
-
-/* --- LINKS DE REDES SOCIAIS --- */
-.social-links-container {
-  gap: 20px; /* Espaçamento entre os ícones */
-  flex-wrap: wrap; /* Permite que os ícones quebrem a linha em telas menores */
-}
-
-.social-link {
-  /* Combina os estilos de '.container a' e remove a animação de shake excessiva */
-  animation: none; /* Removendo animação de shake para melhor experiência */
-  background-color: var(--text-light);
-  color: var(--text-dark);
-  transition: transform 0.3s, background-color 0.3s, color 0.3s;
-  margin: 0; /* Margem controlada pelo gap do container */
-  width: 70px;
-  height: 70px;
-  border-radius: 50%; /* Ícones circulares */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 35px; /* Tamanho do ícone ajustado */
-}
-
-.social-link .fab {
-  font-size: 35px; /* Ajusta o tamanho do ícone Font Awesome */
-}
-
-.social-link:hover {
-  background-color: var(--primary-blue);
-  color: var(--text-light);
-  transform: scale(1.1);
-}
-
-/* --- ESTILOS DE LINK (Revisados para clareza) --- */
+/* Estilos de link */
 a,
 .common {
-  background-color: var(--primary-blue);
-  border: var(--border-width) var(--border-style) var(--text-light);
-  border-radius: var(--border-radius-default);
-  color: var(--text-light);
+  background-color: #5599ff;
+  border: 3px solid #ffffff;
+  border-radius: 20px;
+  color: #ffffff;
   display: inline-block;
+  font-family: Arial, sans-serif;
   font-size: 35px;
   padding: 10px;
-  text-shadow: var(--text-shadow-dark);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   transition: all 0.5s;
-  font-family: Arial, sans-serif;
+}
+.link {
+  border-radius: 20px;
+  display: inline-block;
+  margin: 10px;
+  text-decoration: none;
+  transition: all 0.5s;
+  white-space: nowrap;
 }
 
-.link,
 .link1 {
-  /* Estilos para links que não são os sociais */
+  display: inline-block;
   margin: 10px;
+  margin-bottom: 5px;
   text-decoration: none;
   white-space: nowrap;
-  display: inline-block;
-  transition: all 0.5s;
 }
-
-.navbar a {
-  /* Estilos específicos para links de navegação */
-  border: var(--border-width) var(--border-style) var(--text-light);
-  border-radius: var(--border-radius-default);
-  color: var(--text-light);
-  display: block;
-  float: left;
-  margin: 10px;
-  padding: 14px 16px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.5s;
-  background-color: var(--primary-blue); /* Garante que tenham cor de fundo */
-}
-
-/* --- EFEITOS HOVER --- */
-.navbar a:hover,
-.link1 a:hover,
-.link:hover {
-  background-color: var(--text-light);
-  border-color: var(--primary-blue);
-  color: var(--text-dark);
-  text-shadow: var(--text-shadow-primary);
-  transform: scale(1.12); /* Um único valor de escala para consistência */
-}
-
-/* --- NAVBAR (Mantido como estava, pois depende do JS) --- */
+/* Estilos de navbar */
 .navbar-container {
   position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
+
 }
 
 .navbar {
@@ -242,14 +76,15 @@ a,
   left: 0;
   overflow-x: auto;
   position: relative;
-  scrollbar-color: var(--dark-blue) transparent;
+  scrollbar-color: #06f transparent;
   scrollbar-width: thin;
   top: 0;
   width: 100%;
   transform: translateX(-500%);
   transition: transform 0.45s ease-out;
+  flex-direction: column;
   visibility: hidden;
-  flex-direction: row; /* Mantido como linha */
+  flex-direction: row;
 }
 
 .logo-button-container {
@@ -258,10 +93,10 @@ a,
 }
 
 .menu-button {
-  background-color: var(--primary-blue);
-  border: var(--border-width) var(--border-style) var(--text-light);
-  border-radius: var(--border-radius-default);
-  color: var(--text-light);
+  background-color: #5599ff;
+  border: 3px solid #ffffff;
+  border-radius: 20px;
+  color: #ffffff;
   display: block;
   float: left;
   font-family: Arial, sans-serif;
@@ -270,6 +105,7 @@ a,
   padding: 14px 16px;
   text-align: center;
   text-decoration: none;
+  transition: opacity 0.126s ease-out;
   transition: all 0.5s;
 }
 
@@ -296,36 +132,275 @@ a,
   right: 0;
   top: 0;
   width: 100px;
-  background: linear-gradient(
-    to left,
-    var(--text-light),
-    rgba(255, 255, 255, 0)
-  );
+  background: linear-gradient(to left, #ffffff, #ffffff00);
 }
 
-/* --- DEMAIS ESTILOS (Mantidos com pequenos ajustes) --- */
-h1,
-h2 {
+.navbar a {
+  border: 3px solid #ffffff;
+  border-radius: 20px;
+  color: #ffffff;
+  display: block;
+  float: left;
+  margin: 10px;
+  padding: 14px 16px;
   text-align: center;
+  text-decoration: none;
+  transition: all 0.5s;
 }
 
-.text-primary {
-  background-color: #ffffffbc;
-  border: var(--border-width) var(--border-style) var(--text-light);
-  color: var(--text-dark);
+.navbar a:hover,
+.link1 a:hover{
+  background-color: #ffffff;
+  border-color: #5599ff;
+  color: black;
+  margin-inline: 40px;
+  text-shadow: -1px 0 #5599ff, 0 1px #5599ff, 1px 0 #5599ff, 0 -1px #5599ff;
+  transform: scale(1.2);
+}
+
+h2 a:hover {
+  background-color: #ffffff;
+  border-color: #000000;
+  color: black;
+  margin-inline: 40px;
+  text-shadow: -1px 0 #5599ff, 0 1px #5599ff, 1px 0 #5599ff, 0 -1px #5599ff;
+  transform: scale(1.2);
+}
+
+.transition:hover {
+  background-color: #ffffff;
+  border-color: #000000;
+  color: black;
+  margin-inline: 40px;
+  text-shadow: -1px 0 #5599ff, 0 1px #5599ff, 1px 0 #5599ff, 0 -1px #5599ff;
+  transform: scale(1.2);
+}
+
+.link:hover {
+  background-color: #ffffff;
+  border-color:#0066ff;
+  color:#000000;
+  margin-inline: 55px;
+  text-shadow: -1px 0 #5599ff, 0 1px #5599ff, 1px 0 #5599ff, 0 -1px #5599ff;
+  transform: scale(1.12);
+}
+.container a:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+/* Estilos de container */
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+}
+
+
+/* Estilos de botão */
+#calculateButton {
+  background-color: #5599ff;
+  border: 3px solid #ffffff;
+  border-radius: 40px;
+  color: white;
+  cursor: pointer;
+  font-size: 40px;
+  outline: 3px solid;
+  padding: 20px 40px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#calculateButton:hover {
+  background-color: #1a72f5;
+}
+/* Estilos de cor */
+.color {
+  background-color: #0066ff;
+}
+/* Estilos de ícone */
+.fab {
+  font-size: 75px;
+}
+/* Estilos de entrada */
+#weight,
+#height,
+#a,
+#b,
+#c,
+#x,
+#y,
+#texto1,
+#texto2,
+#myInput {
+  caret-color: auto;
+}
+/* Estilos ocultos */
+.aa {
+  display: none;
+  width: 33%;
+}
+
+@keyframes shake {
+  10% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  20% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  30% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  40% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  50% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  60% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  70% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  80% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  90% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+}
+
+.container a {
+  animation: shake 2s ease-in-out infinite;
+  background-color: #ffffff;
+  color: #000000;
+  transition: all 0.5s;
+  margin: 20px;
+  width: 70px;
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+#changeBackground {
+  background: none !important;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 115px;
+}
+#changeBackground img {
+  border: 3px solid black;
+  border-radius: 100%;
+  height: auto;
+  width: 200px;
+
+  /* Ajuste o valor conforme necessário */
+}
+hr {
+  border: none;
+  border-top: 10px solid #ffffff;
+}
+
+#myChart {
+  color: #5599ff;
+  outline: 3px solid;
+  width: 100%;
+  height: 100%;
+}
+
+.common1 {
+  background-color: #5599ff;
+  border: 3px solid #ffffff;
+  border-radius: 20px;
+  color: #ffffff;
+  display: inline-block;
   font-family: Arial, sans-serif;
-  font-size: 45px;
+  font-size: 26px;
   padding: 10px;
-  text-align: left;
-  text-shadow: var(--text-shadow-light);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-/* ... (Outros estilos como #calculateButton, .fab, @keyframes, etc., podem ser mantidos ou revisados conforme a necessidade específica da aplicação) ... */
+.title-bar {
+  align-items: center;
+  background-color: #5599ff;
+  border-bottom: 10px solid #ffffff;
+  border-top: 10px solid #ffffff;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
 
-/* Removendo a animação de shake para melhor experiência do usuário */
-/* @keyframes shake { ... } */
+.title-bar h1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+@media (max-width: 1080px) {
+  .title-bar h1 a {
+    font-size: 25px;
+  }
+  .title-bar h2 a {
+    font-size: 25px;
+  }
+  .title-bar h1 button {
+    font-size: 25px;
+  }
+  .title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-/* Estilos de utilidade */
+  .title-bar h1 {
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+  }
+
+  .title-bar h2 {
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+  }
+  .link{
+    font-size: 30px;
+  }
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #000000;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .centered {
   align-items: center;
   display: flex;
@@ -333,27 +408,8 @@ h2 {
   justify-content: center;
 }
 
-hr {
-  border: none;
-  border-top: 10px var(--border-style) var(--text-light);
-  width: 100%;
-}
-
-/* --- MEDIA QUERIES (Ajustado para o novo HTML) --- */
-@media (max-width: 1080px) {
-  .title-bar h1 a {
-    font-size: 25px;
-  }
-  .link {
-    font-size: 30px;
-  }
-  .title-bar {
-    justify-content: space-between;
-  }
-  /* Ajustes para centralizar em telas menores */
-  .title-bar h1 {
-    margin: 0;
-    text-align: center;
-    flex-grow: 1;
-  }
+.chart-container {
+  width: 600px;
+  height: 300px;
+  margin-left: 10px;
 }
