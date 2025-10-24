@@ -413,3 +413,141 @@ hr {
   height: 300px;
   margin-left: 10px;
 }
+
+/* ================================================= */
+/* Estilos para a Página de Login                    */
+/* (Adicione isso ao seu index.css)                 */
+/* ================================================= */
+
+/* Define um container principal para a página */
+.login-page-content {
+  padding: 20px 0; /* Substitui os <br> */
+}
+
+/* O container do formulário que antes tinha o estilo inline */
+.login-container {
+  text-align: center;
+  background-color: #0066ff;
+  border: 2px solid #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 90%; /* Adicionado para responsividade */
+  margin: 0 auto; /* Centraliza o container */
+}
+
+/* Grupo de formulário (label + input) */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left; /* Alinha labels à esquerda */
+}
+
+.form-group label {
+  display: block; /* Faz o label ocupar a própria linha */
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 28px; /* Ajustado */
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+/* Estilo para os inputs de texto e senha */
+.form-group input[type="text"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  font-size: 18px;
+  box-sizing: border-box; /* Garante que padding não estoure a largura */
+  caret-color: auto; /* IMPORTANTE: Deixa o cursor de texto visível */
+}
+
+/* Container para o input de senha e o botão de toggle */
+.password-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  flex-grow: 1; /* Faz o input ocupar o espaço disponível */
+}
+
+.password-wrapper .password-toggle {
+  flex-shrink: 0; /* Impede que o botão encolha */
+  margin-left: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #f0f0f0;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.password-wrapper .password-toggle i {
+  color: #333;
+}
+
+/* Containers para mensagens e spinner */
+.spinner-container {
+  margin-top: 15px;
+  height: 50px; /* Reserva espaço para o spinner */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-container {
+  text-align: center;
+  padding: 20px 0; /* Substitui os <br> */
+}
+
+/* Caixa de instruções (antigo .text-primary) */
+.instructions-box {
+  background-color: #ffffffbc;
+  border: 3px solid #ffffff;
+  color: #000000;
+  font-family: Arial, sans-serif;
+  font-size: 22px; /* O anterior (45px/30px) era muito grande */
+  padding: 20px;
+  text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+  
+  max-width: 800px; /* Define uma largura máxima */
+  margin: 20px auto; /* Centraliza e substitui <br> */
+  border-radius: 10px;
+}
+
+.instructions-box ul {
+  list-style-type: none; /* Remove os marcadores padrão */
+  padding-left: 0;
+  margin: 0;
+}
+
+.instructions-box li {
+  position: relative;
+  padding-left: 30px; /* Espaço para o marcador customizado */
+  margin-bottom: 15px; /* Espaçamento entre itens */
+}
+
+.instructions-box li::before {
+  content: "⚫"; /* Adiciona o marcador */
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+.instructions-box li:last-child {
+  margin-bottom: 0;
+}
+
+.instructions-box .example {
+  display: block; /* Coloca o exemplo em linha própria */
+  color: #0066ff;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.instructions-box .highlight-red {
+  color: red;
+  font-weight: bold;
+}
